@@ -1,13 +1,14 @@
+import Image from "next/image";
 import Link from "next/link";
 const appStoreUrl = "https://apps.apple.com/us/app/resell-marketplace/id6759349548";
 const googlePlayUrl = "https://play.google.com/store/apps/details?id=com.rellik20.mobile";
 
 const features = [
-  "Create listings with photos, price, description, and approximate location",
-  "Browse nearby marketplace items with a clean mobile-first experience",
+  "Post item listings with photos, price, description, and approximate location",
+  "Browse nearby secondhand items in a clean mobile-first experience",
   "Search marketplace listings and public user profiles",
   "Favorite listings you want to revisit",
-  "Message buyers and sellers directly in the app",
+  "Message buyers or sellers directly in the app",
   "Report unsafe listings and block users when needed",
 ];
 
@@ -16,7 +17,7 @@ export default function Home() {
     <main className="site-shell">
       <nav className="nav">
         <Link className="brand" href="/">
-          <span className="brand-mark">R</span>
+          <Image className="brand-logo" src="/resell-logo.png" alt="ReSell Marketplace logo" width={42} height={42} priority />
           <span>ReSell Marketplace</span>
         </Link>
         <div className="nav-links">
@@ -29,10 +30,9 @@ export default function Home() {
       <section className="hero">
         <div className="hero-copy">
           <p className="eyebrow">Local resale made simple</p>
-          <h1>Buy and sell nearby items with a cleaner marketplace experience.</h1>
+          <h1>List items, browse nearby finds, and message buyers or sellers directly.</h1>
           <p className="hero-text">
-            ReSell Marketplace helps users create listings, browse local items, search people
-            and public profiles, favorite listings, and message safely inside the app.
+            ReSell Marketplace helps users post items for sale, browse nearby listings, search public profiles, save favorites, and message buyers or sellers directly to arrange transactions.
           </p>
 
           <div className="cta-row">
@@ -45,8 +45,7 @@ export default function Home() {
           </div>
 
           <p className="small-note">
-            ReSell does not process payments, provide escrow, handle shipping, or guarantee
-            transactions. Buyers and sellers arrange transactions directly.
+            ReSell is a listing, discovery, and messaging platform. It does not process payments, provide escrow, handle shipping, or guarantee transactions. Buyers and sellers arrange transactions directly.
           </p>
         </div>
 
@@ -62,7 +61,7 @@ export default function Home() {
             </div>
             <div className="message-card">
               <strong>Message sellers</strong>
-              <span>Connect directly about nearby listings.</span>
+              <span>Arrange details directly through messaging.</span>
             </div>
           </div>
         </div>

@@ -29,7 +29,7 @@ export default function SupportPage() {
 
         <div className="support-box">
           <span>Support email</span>
-          <a href="mailto:support@resellmarketplace.app">support@resellmarketplace.app</a>
+          <a href="mailto:resell21126@gmail.com">resell21126@gmail.com</a>
         </div>
 
         <p>
