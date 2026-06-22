@@ -15,8 +15,13 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "ReSell Marketplace",
   description:
-    "ReSell Marketplace is a local resale app for buying, selling, messaging, and browsing nearby listings.",
+    "ReSell Marketplace is a local resale app for listing items, browsing nearby finds, and messaging buyers or sellers directly.",
   metadataBase: new URL("https://resellmarketplace.app"),
+  icons: {
+    icon: "/resell-logo.png",
+    shortcut: "/resell-logo.png",
+    apple: "/resell-logo.png",
+  },
 };
 
 export default function RootLayout({

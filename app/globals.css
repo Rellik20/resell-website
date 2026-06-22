@@ -136,6 +136,7 @@ p {
   border-radius: 999px;
   padding: 0 22px;
   font-weight: 750;
+  white-space: nowrap;
   transition: transform 160ms ease, border-color 160ms ease, background 160ms ease;
 }
 
@@ -274,6 +275,11 @@ p {
   gap: 28px;
   padding: 36px;
   color: var(--muted);
+}
+
+.safety-panel .secondary-btn {
+  flex: 0 0 auto;
+  min-width: 132px;
 }
 
 .safety-panel h2 {

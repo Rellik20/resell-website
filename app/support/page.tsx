@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 export const metadata = {
   title: "Support | ReSell Marketplace",
@@ -9,7 +10,7 @@ export default function SupportPage() {
     <main className="site-shell">
       <nav className="nav">
         <Link className="brand" href="/">
-          <span className="brand-mark">R</span>
+          <Image className="brand-logo" src="/resell-logo.png" alt="ReSell Marketplace logo" width={42} height={42} />
           <span>ReSell Marketplace</span>
         </Link>
         <div className="nav-links">
@@ -23,8 +24,7 @@ export default function SupportPage() {
         <p className="eyebrow">Support</p>
         <h1>Contact ReSell Marketplace support</h1>
         <p>
-          Need help with your account, listings, messages, safety tools, or app access?
-          Contact ReSell Marketplace support using the email below.
+          Need help with your account, listings, messages, safety tools, or app access? Contact ReSell Marketplace support using the email below.
         </p>
 
         <div className="support-box">

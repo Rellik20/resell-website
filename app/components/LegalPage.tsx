@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import fs from "fs";
 import path from "path";
@@ -95,7 +96,7 @@ export default function LegalPage({
     <main className="site-shell">
       <nav className="nav">
         <Link className="brand" href="/">
-          <span className="brand-mark">R</span>
+          <Image className="brand-logo" src="/resell-logo.png" alt="ReSell Marketplace logo" width={42} height={42} />
           <span>ReSell Marketplace</span>
         </Link>
         <div className="nav-links">
