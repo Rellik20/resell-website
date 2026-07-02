@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 
-const SITE_URL = "https://resellmarketplace.app";
+const SITE_URL = "https://www.resellmarketplace.app";
 const API_BASE_URL = process.env.RESELL_API_BASE_URL || "https://resell-v5y2.onrender.com";
 
 type PublicUser = {
