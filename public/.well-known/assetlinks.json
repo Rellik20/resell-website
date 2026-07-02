@@ -1,0 +1,14 @@
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.rellik20.mobile",
+      "sha256_cert_fingerprints": [
+        "A6:1F:93:E7:DA:50:58:93:3B:BE:25:61:E5:44:52:9D:56:7C:09:3B:74:31:B2:A2:7E:3E:02:6F:21:BC:BE:58"
+      ]
+    }
+  }
+]

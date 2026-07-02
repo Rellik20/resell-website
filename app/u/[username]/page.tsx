@@ -83,10 +83,10 @@ export async function generateMetadata({
       type: "profile",
       images: [
         {
-          url: `${SITE_URL}/resell-logo.png`,
+          url: `${SITE_URL}/og-profile.png`,
           width: 1200,
-          height: 1200,
-          alt: "ReSell Marketplace",
+          height: 630,
+          alt: "ReSell Marketplace public profile",
         },
       ],
     },
@@ -94,7 +94,7 @@ export async function generateMetadata({
       card: "summary_large_image",
       title,
       description,
-      images: [`${SITE_URL}/resell-logo.png`],
+      images: [`${SITE_URL}/og-profile.png`],
     },
   };
 }
