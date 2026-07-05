@@ -5,12 +5,16 @@
       {
         "appID": "VX23C3L9MD.com.rellik20.mobile",
         "paths": [
-          "/u/*"
+          "/u/*",
+          "/events/*"
         ],
         "components": [
           {
             "/": "/u/*",
             "comment": "Open ReSell public profile links in the app"
+          },
+          {
+            "/": "/events/*"
           }
         ]
       }

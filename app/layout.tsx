@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   title: "ReSell Marketplace",
   description:
     "ReSell Marketplace is a local resale app for listing items, browsing nearby finds, and messaging buyers or sellers directly.",
-  metadataBase: new URL("https://resellmarketplace.app"),
+  metadataBase: new URL("https://www.resellmarketplace.app"),
   icons: {
     icon: "/resell-logo.png",
     shortcut: "/resell-logo.png",
