@@ -174,8 +174,23 @@ export default async function EventSharePage({ params }: PageProps) {
           ) : null}
 
           <div className="mt-6 grid gap-3 text-sm font-semibold text-white/75">
-            {event.venueName || event.locationLabel ? <p>📍 {event.venueName || event.locationLabel}</p> : null}
-            {event.priceText ? <p>🏷️ {event.priceText}</p> : null}
+            {event.venueName || event.locationLabel ? (
+              <div className="flex items-center gap-3">
+                <span className="flex h-8 w-8 items-center justify-center rounded-full border border-[#D19759]/35 bg-[#D19759]/15">
+                  <span className="h-3 w-3 rounded-full border-2 border-[#D19759]" />
+                </span>
+                <span>{event.venueName || event.locationLabel}</span>
+              </div>
+            ) : null}
+
+            {event.priceText ? (
+              <div className="flex items-center gap-3">
+                <span className="flex h-8 w-8 items-center justify-center rounded-full border border-[#D19759]/35 bg-[#D19759]/15">
+                  <span className="h-2.5 w-4 rounded-sm border-2 border-[#D19759]" />
+                </span>
+                <span>{event.priceText}</span>
+              </div>
+            ) : null}
           </div>
 
           {event.description ? <p className="mt-6 text-base leading-7 text-white/72">{event.description}</p> : null}
