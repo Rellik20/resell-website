@@ -77,6 +77,38 @@ async function getEvent(slug: string): Promise<EventPreview | null> {
   }
 }
 
+function InfoIcon({ type }: { type: "date" | "location" | "price" }) {
+  const paths = {
+    date: (
+      <>
+        <path d="M7 3.5v3M17 3.5v3" />
+        <path d="M5.5 8.5h13" />
+        <path d="M6.8 5.2h10.4c1.2 0 2.1.9 2.1 2.1v10.4c0 1.2-.9 2.1-2.1 2.1H6.8c-1.2 0-2.1-.9-2.1-2.1V7.3c0-1.2.9-2.1 2.1-2.1Z" />
+      </>
+    ),
+    location: (
+      <>
+        <path d="M12 21s6-5.4 6-11a6 6 0 1 0-12 0c0 5.6 6 11 6 11Z" />
+        <path d="M12 12.2a2.2 2.2 0 1 0 0-4.4 2.2 2.2 0 0 0 0 4.4Z" />
+      </>
+    ),
+    price: (
+      <>
+        <path d="M4.8 11.2 11.2 4.8h7.1v7.1l-6.4 6.4a2 2 0 0 1-2.8 0l-4.3-4.3a2 2 0 0 1 0-2.8Z" />
+        <path d="M15.7 8.3h.1" />
+      </>
+    ),
+  };
+
+  return (
+    <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl border border-[#D19759]/35 bg-[#D19759]/15">
+      <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="#D19759" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        {paths[type]}
+      </svg>
+    </span>
+  );
+}
+
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { slug } = await params;
   const event = await getEvent(slug);
@@ -140,9 +172,12 @@ export default async function EventSharePage({ params }: PageProps) {
     );
   }
 
+  const locationText = event.venueName || event.locationLabel || "";
+  const dateText = formatDate(event.startAt);
+
   return (
     <main className="min-h-screen bg-[#0f1420] px-5 py-10 text-white">
-      <section className="mx-auto max-w-2xl overflow-hidden rounded-[34px] border border-white/10 bg-white/[0.06] shadow-2xl">
+      <section className="mx-auto max-w-2xl overflow-hidden rounded-[34px] border border-white/10 bg-[#1C2230] shadow-2xl">
         <div className="relative h-72 bg-[#1C2230]">
           {event.coverImageUrl ? (
             // eslint-disable-next-line @next/next/no-img-element
@@ -152,7 +187,7 @@ export default async function EventSharePage({ params }: PageProps) {
               <Image src="/resell-logo.png" alt="ReSell Marketplace" width={92} height={92} priority className="rounded-3xl" />
             </div>
           )}
-          <div className="absolute inset-0 bg-gradient-to-b from-black/5 via-[#0f1420]/20 to-[#0f1420]" />
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#0f1420]/25 to-[#1C2230]" />
         </div>
 
         <div className="p-7">
@@ -164,31 +199,46 @@ export default async function EventSharePage({ params }: PageProps) {
             </div>
           </div>
 
-          <p className="mt-6 text-sm font-bold text-[#D19759]">{formatDate(event.startAt)}</p>
+          <p className="mt-6 text-sm font-bold text-[#D19759]">{dateText}</p>
           <h1 className="mt-2 text-4xl font-black leading-tight tracking-tight">{event.title}</h1>
 
           {event.isPast ? (
-            <p className="mt-4 rounded-2xl border border-[#D19759]/35 bg-[#D19759]/15 px-4 py-3 text-sm font-semibold text-[#F2D6AE]">
-              This event has ended. You can still view the details in ReSell.
-            </p>
+            <div className="mt-5 flex gap-3 rounded-2xl border border-[#D19759]/35 bg-[#D19759]/15 px-4 py-3">
+              <InfoIcon type="date" />
+              <p className="text-sm font-semibold leading-6 text-[#F2D6AE]">
+                This event has ended. You can still view the details in ReSell.
+              </p>
+            </div>
           ) : null}
 
-          <div className="mt-6 grid gap-3 text-sm font-semibold text-white/75">
-            {event.venueName || event.locationLabel ? (
-              <div className="flex items-center gap-3">
-                <span className="flex h-8 w-8 items-center justify-center rounded-full border border-[#D19759]/35 bg-[#D19759]/15">
-                  <span className="h-3 w-3 rounded-full border-2 border-[#D19759]" />
-                </span>
-                <span>{event.venueName || event.locationLabel}</span>
+          <div className="mt-6 grid gap-3">
+            {dateText ? (
+              <div className="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/[0.04] p-4">
+                <InfoIcon type="date" />
+                <div>
+                  <p className="text-xs font-bold uppercase tracking-[0.16em] text-white/40">Date and time</p>
+                  <p className="mt-1 text-sm font-bold text-white/82">{dateText}</p>
+                </div>
+              </div>
+            ) : null}
+
+            {locationText ? (
+              <div className="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/[0.04] p-4">
+                <InfoIcon type="location" />
+                <div>
+                  <p className="text-xs font-bold uppercase tracking-[0.16em] text-white/40">Location</p>
+                  <p className="mt-1 text-sm font-bold text-white/82">{locationText}</p>
+                </div>
               </div>
             ) : null}
 
             {event.priceText ? (
-              <div className="flex items-center gap-3">
-                <span className="flex h-8 w-8 items-center justify-center rounded-full border border-[#D19759]/35 bg-[#D19759]/15">
-                  <span className="h-2.5 w-4 rounded-sm border-2 border-[#D19759]" />
-                </span>
-                <span>{event.priceText}</span>
+              <div className="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/[0.04] p-4">
+                <InfoIcon type="price" />
+                <div>
+                  <p className="text-xs font-bold uppercase tracking-[0.16em] text-white/40">Price</p>
+                  <p className="mt-1 text-sm font-bold text-white/82">{event.priceText}</p>
+                </div>
               </div>
             ) : null}
           </div>
