@@ -1,122 +1,76 @@
-# Account Deletion
+# Delete Your ReSell Account
 
-**Last updated:** May 5, 2026
+**Last updated:** July 19, 2026
 
-ReSell Marketplace provides **in-app account deletion**. When you delete your account, your account becomes inaccessible and ReSell Marketplace removes, deletes, disables, or de-identifies associated data as described below.
+ReSell provides an in-app deletion option and this external deletion resource.
 
-If you have trouble deleting your account in the app, you can also request deletion by email.
+## Delete in the app
 
----
+1. Open ReSell Marketplace.
+2. Sign in.
+3. Open **Profile**.
+4. Open the **Menu**.
+5. Select **Account**.
+6. Select **Delete Account** and confirm.
 
-## Delete your account in the app
+The deletion action is permanent for the ReSell account and cannot be undone.
 
-1. Open the ReSell Marketplace app and sign in.
-2. Go to **Profile**.
-3. Open the profile menu/account options.
-4. Tap **Delete Account**.
-5. Confirm the deletion when prompted.
+## Request deletion without the app
 
-Once confirmed, your account deletion request is processed without requiring you to contact support first.
+Email **resell21126@gmail.com** from the email address associated with your ReSell account.
 
----
+Use the subject:
 
-## Request account deletion by email
+**ReSell Account Deletion Request**
 
-Email: **resell21126@gmail.com**  
-Subject: **Account Deletion Request**
+Include:
 
-Please include:
+- Your ReSell username
+- Your public ReSell User ID, if known
+- A statement that you want the account and associated data deleted
 
-- The email address used for your ReSell Marketplace account
-- A short message confirming that you want the account deleted
+We may request reasonable verification before processing the request so another person cannot delete your account.
 
-We may ask for a minimal verification step to help confirm that the request is legitimate.
+## Data normally deleted or de-identified
 
----
+Deletion initiates removal or de-identification of data such as:
 
-## What is deleted or removed from active use
+- Account access and authentication records no longer needed for security
+- Profile information and profile photo
+- Listings and listing media
+- Stories and events created by the account
+- Favorites and user preferences
+- Public reviews created by the account, subject to transaction integrity and legal needs
+- Push tokens and active sessions
+- Other active user content controlled by ReSell
 
-When your account is deleted, ReSell Marketplace removes, deletes, disables, or de-identifies core account content associated with your account.
+Deletion from backups and service-provider systems may take additional time through standard retention cycles.
 
-### Account data
+## Data that may be retained
 
-- Your ability to access the ReSell Marketplace account
-- Authentication-related records, such as password reset requests
-- Pending signup verification records, if any
-- Active account profile information where deletion is supported
+ReSell may retain limited information when reasonably necessary for:
 
-### Profile content
+- Fraud, spam, abuse, and account-evasion prevention
+- User reports, evidence, moderation history, and safety investigations
+- Legal obligations, lawful requests, and legal claims
+- Financial, tax, accounting, purchase, refund, chargeback, and store reconciliation
+- Security logs and backup integrity
+- Protecting another user’s transaction, message, or review record
 
-- Profile photo, on a best-effort basis
-- Public profile access associated with the deleted account
-- Public profile listing visibility associated with the deleted account
+Retained information is limited to the relevant purpose and is not used to keep the deleted account active.
 
-### Listings and listing images
+Messages or content already received, copied, or saved by another user may remain with that user. ReSell may de-identify some conversation or transaction context rather than delete another user’s legitimate record.
 
-- Your marketplace listings
-- Listing photos stored with our image storage provider, currently Cloudflare R2, on a best-effort basis
-- Legacy listing photos stored with earlier image providers, such as Cloudinary, on a best-effort basis where applicable
+## Subscriptions and purchases
 
-### Favorites and marketplace activity
+Deleting ReSell does not cancel subscriptions billed by Apple or Google.
 
-- Favorites associated with your account, where technically supported
-- Account-linked marketplace activity removed from active user-facing use where technically supported
+Cancel recurring subscriptions in your App Store or Google Play account. Account deletion does not automatically create a refund for subscriptions or one-time paid features.
 
-### Chat and messaging
+## Timing and confirmation
 
-- Conversations you participated in
-- Messages you sent or received, on a best-effort basis as part of conversation cleanup
-
----
-
-## What may be retained
-
-Even after account deletion, limited information may remain where reasonably necessary or legally required.
-
-### Safety and abuse prevention
-
-ReSell Marketplace may retain limited moderation and safety records, including:
-
-- Reports
-- Report categories and report details
-- Report evidence images or screenshots
-- Moderation snapshots
-- Block/unblock records
-- Admin review records
-- Related audit history
-
-These records may be retained where reasonably necessary for abuse prevention, fraud prevention, platform integrity, investigations, legal compliance, or user safety.
-
-### Legal obligations
-
-We may retain information required to:
-
-- Comply with law
-- Resolve disputes
-- Enforce agreements
-- Respond to lawful requests
-- Protect users, the public, or the platform
-
-### Backups and logs
-
-Residual copies may exist in backups, logs, or system archives for a limited period and are removed or overwritten on standard retention cycles.
-
----
-
-## Important notes
-
-- **Deletion is permanent.** Once completed, your account may not be restorable.
-- **Some limited moderation, safety, and legal records may remain** even after deletion, as described above.
-- **Image deletion is best effort.** We attempt to delete account/listing images from active storage, but residual copies may remain temporarily in caches, backups, logs, or legacy systems.
-- **Public safety:** If you believe there is an urgent safety issue, contact local emergency services immediately.
-
-ReSell Marketplace does not sell personal data.
-
----
+We process verified requests as reasonably soon as practical. Complex safety, legal, or purchase issues may require additional review. You may contact us for status.
 
 ## Contact
 
-If you have questions about account deletion or your data:
-
-**resell21126@gmail.com**  
-ReSell Marketplace operated by **Scott Cote**
+**resell21126@gmail.com**

@@ -102,6 +102,8 @@ export default function Home() {
           <Link href="/privacy">Privacy Policy</Link>
           <Link href="/terms">Terms of Service</Link>
           <Link href="/community-guidelines">Community Guidelines</Link>
+          <Link href="/subscription-terms">Subscription Terms</Link>
+          <Link href="/paid-features">Paid Features</Link>
           <Link href="/delete-account">Delete Account</Link>
           <Link href="/support">Support</Link>
         </div>

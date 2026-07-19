@@ -4,282 +4,311 @@ title: Privacy Policy
 
 # Privacy Policy
 
-**Effective date:** May 5, 2026  
-**Operator:** Scott Cote (“ReSell Marketplace”, “ReSell”, “we”, “us”)  
+**Effective date:** July 19, 2026
+**Operator:** Scott Cote, operating ReSell Marketplace (“ReSell,” “we,” “us,” or “our”)
 **Contact:** resell21126@gmail.com
 
-This Privacy Policy explains how ReSell Marketplace collects, uses, shares, stores, and protects information when you use the ReSell Marketplace mobile application and related services (the “Service”).
+This Privacy Policy explains how ReSell collects, uses, discloses, stores, and protects information when you use the ReSell Marketplace mobile application, website, public profile and event pages, application programming interfaces, and related services (collectively, the “Service”).
 
-ReSell Marketplace is a user-generated local marketplace app. Users can create listings, upload listing photos, search marketplace listings, search public profiles, message other users, favorite listings, report content or users, block users, and manage account safety controls.
+ReSell is a user-generated local marketplace for adults. Depending on the version and features available to you, the Service may allow users to create public profiles and listings, upload photos and stories, create or view events, search for listings or people, favorite listings, message other users, review marketplace participants, use seller analytics, purchase sponsored-listing campaigns, subscribe to ReSell Pro or a separate profile badge, and use reporting, blocking, and account-deletion controls.
 
-We do **not** sell your personal information.
+We do not sell personal information. ReSell’s own sponsored-listing system promotes listings inside ReSell; it is not a third-party behavioral advertising network and does not use an advertising identifier to track you across unrelated companies’ apps or websites.
 
-## 1. Summary
+## 1. Information we collect
 
-ReSell Marketplace collects information needed to operate a marketplace and messaging service, including account information, listing content, listing photos, approximate public location labels, private coordinates used for nearby discovery and distance calculations, messages, favorites, reports, block/unblock records, moderation records, and technical/security logs.
+### 1.1 Account and authentication information
 
-ReSell Marketplace uses location, camera, photo library, and notifications only for the app features described in this policy. Exact listing coordinates are not shown publicly; other users see only an approximate public City/State-style location label where shown.
+We may collect:
 
-## 2. Information we collect
+- Email address
+- Password hash; we do not store plaintext passwords
+- Email-verification and password-reset records
+- Username, first and last name, country, biography, and profile photo
+- Internal account ID and public ReSell User ID
+- Account creation, update, login, policy-acceptance, and deletion timestamps
+- Account role, subscription or badge status, moderation status, and disabled/deleted status
+- Authentication, refresh-token, session, and device-registration records
 
-### 2.1 Account information
+### 1.2 Public profiles and marketplace content
+
+We may collect and display information that you choose to make available through the Service, including:
+
+- Username, display name, profile photo, biography, country, public User ID, and public profile link
+- Listing title, description, price, photos, location label, condition or category information, and listing status
+- Active, hidden, sold, removed, and deleted listing records
+- Public reviews, ratings, review comments, and rating summaries
+- Public event titles, descriptions, dates, times, locations, images, hosts, and event links
+- Stories, story images or video, captions, view state, and expiration or deletion information where stories are available
+
+Content you post publicly may be viewed, copied, or shared by other users. Avoid posting sensitive personal information.
+
+### 1.3 Photos, camera, and uploaded files
+
+When you choose to use an image feature, ReSell may request access to your camera or selected photos for purposes such as:
+
+- Listing photos
+- Profile photos
+- Story media
+- Event media
+- Optional report evidence
+
+ReSell does not need unrestricted background access to your entire photo library. The operating system may allow you to provide access only to selected media.
+
+Uploaded images may be stored and delivered through Cloudflare R2. Legacy images may remain with Cloudinary during migration, backup, moderation, or retention periods.
+
+### 1.4 Location information
+
+With permission, ReSell may process precise device coordinates to:
+
+- Show nearby listings
+- Calculate approximate distance
+- Help select an approximate public location
+- Sort or filter marketplace results
+
+Listings may also contain coordinates supplied through a manual or custom location. ReSell is designed to show other users an approximate City/State-style label and approximate distance rather than exact coordinates. Exact coordinates may still be processed privately by ReSell and its infrastructure to provide location features.
+
+You may deny location permission and use manual location options where available, although nearby and distance features may be limited.
+
+### 1.5 Search, favorites, interactions, and analytics
+
+We may process:
+
+- Search text, filters, sort choices, custom search location, and search mode
+- Listings and public profiles opened or viewed
+- Favorites added or removed
+- Listing impressions and detail-page views
+- Unique-viewer relationships used to avoid double-counting some analytics
+- Message leads associated with marketplace listings
+- Story and event interactions
+- Seller totals and per-listing analytics
+- Sponsored-listing impressions, clicks, click-through rate, campaign duration, and campaign status
+
+Seller analytics are intended to help sellers understand activity. Counts may be delayed, estimated, deduplicated, filtered, or corrected and are not guaranteed to be complete.
+
+### 1.6 Messages and conversations
 
 We may collect and store:
 
-- Email address
-- Password hash; we do not store your plaintext password
-- Username
-- First name, last name, country, and bio if provided
-- Profile photo if you choose to upload one
-- Internal ReSell User ID and public user identifier
-- Account metadata, such as created/updated timestamps
-- Account status and safety flags, such as disabled, deleted, admin role, or moderation status
-- Terms, policy, or account-deletion metadata where applicable
-
-### 2.2 Listings and marketplace content
-
-When you create or manage listings, we may collect:
-
-- Listing title, description, and price
-- Listing photos you upload
-- Listing status, such as active, sold, hidden, or deleted
-- Approximate public location label shown in the app, such as City/State
-- Private listing coordinates used for nearby discovery and approximate distance calculations
-- Creation and update timestamps
-- Listing moderation or admin safety status where applicable
-
-### 2.3 Photos, camera, and image uploads
-
-ReSell Marketplace may request photo library or camera access only when you choose to use features that need images, such as:
-
-- Adding listing photos
-- Changing your profile picture
-- Attaching optional evidence images to a report
-
-Images uploaded to ReSell Marketplace are stored using our image storage provider, currently Cloudflare R2. Older images may have previously been stored with Cloudinary during earlier app versions. We may retain Cloudinary only as a temporary backup or legacy provider while migration and retention periods are completed.
-
-We do not access your entire photo library in the background. Image access is used when you choose an image or take a photo through the app.
-
-### 2.4 Location information
-
-ReSell Marketplace supports nearby marketplace discovery and listing locations. Depending on how you use the app, we may collect:
-
-- Private coordinates, such as latitude and longitude, when you allow current location access
-- Approximate public City/State-style location labels shown to other users
-- Custom locations you type or select
-- Approximate distance between users/listings where location-based features are active
-
-**Location privacy design:** ReSell Marketplace is designed to show other users only an approximate public location label and approximate distance where applicable. Your exact coordinates are not shown publicly.
-
-You can deny location permission and use custom/manual location options instead. If you deny location access, some nearby/distance features may be limited or unavailable.
-
-### 2.5 Search, favorites, and public profiles
-
-When you use marketplace and people search, public profiles, or favorites, we may process:
-
-- Search text you enter
-- Public profile information shown in the app
-- Listings associated with a public profile
-- Listings you favorite or unfavorite
-- Sorting/filtering information such as price, distance, and custom location filters
-
-Favorites and search-related features help personalize and operate the marketplace experience.
-
-### 2.6 Messaging data
-
-When you use messages, we may collect and store:
-
-- Message text you send and receive
+- Message text
 - Conversation participants
-- Message timestamps
-- Read/unread status
-- Conversation metadata such as last message preview and time
-- Archive/unarchive or notification-related state where applicable
+- Associated listing and listing owner
+- Message and conversation timestamps
+- Read status, archive status, last-message preview, and notification state
+- Safety, moderation, and abuse-related conversation metadata
 
-Messages are user-generated content. We may review messages when reasonably necessary for safety, abuse prevention, moderation, legal compliance, or support.
+Messages are not public, but they are not end-to-end encrypted. ReSell may access or review messages when reasonably necessary for support, reporting, moderation, fraud prevention, security, legal compliance, or protection of users.
 
-### 2.7 Notifications
+### 1.7 Reviews and transaction-completion records
 
-ReSell Marketplace may request notification permission to send app-related alerts, such as message notifications or account/service updates. You can control notifications through your device settings.
+When a listing is marked sold or a review is created, we may process:
 
-We do not require notifications to browse listings, but some communication features may be less timely if notifications are disabled.
+- Buyer and seller identifiers
+- Listing snapshot information
+- Transaction-completion timestamps
+- Review rating, comment, edit history, and deletion state
+- Eligibility and cooldown information used to prevent duplicate or abusive reviews
 
-### 2.8 Stories / update announcements
+Reviews may remain visible until deleted, removed, or no longer associated with an available public profile, subject to moderation and retention needs.
 
-Version 2.0.0 includes an official ReSell Marketplace update story/announcement area used by ReSell Marketplace to communicate app updates or release information. This is not currently a general user story-posting feature.
+### 1.8 Stories and events
 
-We may record limited local/app state, such as whether an official update story has been viewed, to avoid repeatedly showing the same update as new.
+Where available, we may process story or event content, media, creators, viewers or interaction state, dates, locations, attendance-related information, reports, and moderation status. Public event and profile pages may be available on the ReSell website and may be accessible without signing in.
 
-### 2.9 Reports, blocking, and moderation data
+### 1.9 Reports, blocking, and moderation
 
-If you use safety features, we may collect:
+We may collect:
 
-- Reports you submit
-- The type of content or user being reported
-- Report category selected
-- Free-text report details you provide
-- Optional screenshots or image evidence attached to reports
-- Block and unblock relationships
-- Moderation/admin actions and related timestamps
-- Snapshot information needed to preserve moderation history if an account is later deleted
-- Safety status of users, listings, reports, or messages
+- Reports about listings, users, messages, stories, events, reviews, or other content
+- Report type, category, reason, free-text details, and optional evidence
+- Blocking and unblocking relationships
+- Admin or moderator decisions
+- Hidden, removed, restricted, disabled, appealed, or restored status
+- Snapshots needed to preserve the context of a safety report after content or an account changes
+- Fraud, abuse, spam, prohibited-item, and policy-enforcement signals
 
-Blocked users may be managed from the profile menu where supported. Blocking may limit interactions and visibility between users.
+Do not submit false or malicious reports.
 
-### 2.10 Technical, security, and service data
+### 1.10 Notifications and device information
 
-We may collect or process:
+If notifications are enabled, we may collect push tokens and related platform or device information to deliver messages, account notices, safety notices, and service updates. You can disable notifications in device settings.
 
-- Basic device and app information needed to operate the Service
-- Request metadata, logs, and error information
-- IP address and infrastructure/security logs processed by hosting or security providers
-- Authentication, session, and token-related records
-- Push notification tokens if notifications are enabled
+### 1.11 Paid features and store-purchase information
 
-We use this data for reliability, security, debugging, abuse prevention, and service operation.
+When paid features are enabled and you initiate or complete a purchase through Apple or Google, ReSell may receive or process:
+
+- Platform and store
+- Product identifier
+- Purchase token or signed transaction data
+- A cryptographic hash of a purchase token
+- Transaction ID, original transaction ID, or Google order ID
+- Purchase, verification, acknowledgement, consumption, renewal, expiration, cancellation, grace-period, revocation, and refund status
+- Store environment, such as sandbox, test, or production
+- Purchase and verification timestamps
+- Subscription or campaign entitlement dates
+- Limited store response data needed for fraud prevention, support, reconciliation, and entitlement management
+
+Apple or Google processes your payment credentials. ReSell does not receive your full credit-card number from the app store.
+
+Sponsored-listing purchases may also create a campaign record containing the listing, campaign duration, activation and end times, impressions, clicks, and payment status.
+
+### 1.12 Support and communications
+
+We may collect information you send through support email, report-a-problem tools, legal requests, account-deletion requests, or other communications, including attachments and records of our response.
+
+### 1.13 Technical, security, and operational data
+
+ReSell and its service providers may process:
+
+- IP address
+- Request, server, security, and audit logs
+- App version, operating system, platform, device type, and device name where provided
+- Error, crash, performance, and diagnostic information
+- API, database, storage, email, and notification delivery metadata
+- Rate-limit, authentication, fraud-prevention, and abuse-prevention information
+
+## 2. Sources of information
+
+We collect information:
+
+- Directly from you
+- Automatically when you use the Service
+- From other users who interact with or report content
+- From Apple, Google, or other service providers involved in purchases and service delivery
+- From publicly available information when necessary for support, safety, or legal compliance
 
 ## 3. How we use information
 
 We use information to:
 
-- Create, authenticate, and manage accounts
-- Provide marketplace listings, public profiles, favorites, and search
-- Upload, store, display, and manage listing/profile/report images
-- Provide location-based discovery and approximate distance features
-- Provide user-to-user messaging
-- Send app-related notifications when allowed
-- Show official ReSell Marketplace update announcements
-- Support reporting, blocking, unblocking, moderation, and admin review workflows
-- Prevent abuse, scams, spam, fraud, prohibited transactions, and policy violations
-- Enforce our Terms of Service and Community Guidelines
-- Maintain, debug, secure, and improve the Service
-- Comply with legal obligations and respond to lawful requests
+- Register, authenticate, secure, and manage accounts
+- Provide listings, profiles, search, favorites, messages, stories, events, reviews, notifications, and public links
+- Provide nearby discovery and approximate-distance features
+- Store, optimize, moderate, and display user media
+- Create seller analytics and sponsored-campaign analytics
+- Verify purchases and maintain paid-feature entitlements
+- Restore purchases and respond to purchase, subscription, campaign, refund, or account questions
+- Detect and prevent fraud, scams, spam, prohibited goods, abusive behavior, security incidents, and policy evasion
+- Process reports, blocks, moderation decisions, and appeals
+- Debug, maintain, improve, and measure the Service
+- Communicate policy, security, account, and service updates
+- Enforce our Terms, Community Guidelines, Subscription Terms, and Paid Features Terms
+- Comply with legal obligations and lawful requests
+- Establish, exercise, or defend legal claims
 
-## 4. How we share information
+## 4. Information visible to other users or the public
 
-### 4.1 With other users
+Depending on the feature, others may see:
 
-Depending on your use of the Service, other users may see:
+- Public profile and User ID information
+- Listings, listing media, prices, descriptions, sold status, and approximate location
+- Public ratings and reviews
+- Stories and events
+- Whether a listing is sponsored
+- A paid profile badge, if enabled
+- Messages sent directly to them
 
-- Your username and public profile information
-- Your profile photo if uploaded
-- Your listing photos, title, description, price, and status
-- Your approximate public City/State-style location label
-- Approximate distance information where location-based features are active
-- Messages you send to them
+A paid badge is a visual paid feature. It is not proof that ReSell verified a person’s identity, ownership, trustworthiness, qualifications, or transaction safety.
 
-ReSell Marketplace is designed not to show your exact listing coordinates publicly.
+## 5. How we disclose information
 
-### 4.2 With service providers
+### 5.1 Service providers
 
-We use third-party providers to operate the Service. These providers may process information on our behalf, including:
+We may disclose information to providers that help operate ReSell, such as:
 
-- Cloudflare R2 for image storage and delivery
-- Database hosting for app data
-- Backend hosting and infrastructure providers
-- Email delivery providers for verification and password reset messages
-- Push notification services for notification delivery
-- Security, logging, and monitoring providers
+- MongoDB or other database hosting
+- Render or other application hosting
+- Cloudflare R2 and legacy Cloudinary image services
+- Email and SMTP delivery services
+- Expo, Apple, Google, and device push-notification services
+- Apple App Store and Google Play billing and verification services
+- Security, logging, monitoring, and support providers
 
-These providers are authorized to process information only as needed to provide services to ReSell Marketplace.
+These providers may process information under their own terms and privacy policies and only as necessary for their services, legal obligations, security, and fraud prevention.
 
-### 4.3 Legal, safety, and enforcement disclosures
+### 5.2 Other users and public visitors
 
-We may disclose information if we believe it is necessary to:
+We disclose public content as described above and deliver messages to intended recipients.
 
-- Comply with law, regulation, legal process, or government request
-- Enforce our Terms, Community Guidelines, or other policies
-- Detect, prevent, or address fraud, scams, abuse, security issues, or technical problems
-- Protect the rights, property, or safety of ReSell Marketplace, users, or the public
-- Investigate reports, threats, prohibited content, or safety incidents
+### 5.3 Legal and safety disclosures
 
-### 4.4 Business changes
+We may preserve or disclose information when we reasonably believe it is necessary to comply with law or legal process, enforce policies, investigate fraud or abuse, protect users or the public, respond to an emergency, or protect ReSell’s rights and systems.
 
-If ReSell Marketplace is involved in a merger, acquisition, financing, reorganization, bankruptcy, or sale of assets, information may be transferred as part of that transaction, subject to applicable law.
+### 5.4 Business transfers
 
-## 5. Content moderation and review
+Information may be transferred as part of a merger, financing, acquisition, reorganization, bankruptcy, or sale of all or part of the Service, subject to applicable law.
 
-ReSell Marketplace may review listings, public profiles, messages, reports, report evidence, account activity, and related records when reasonably necessary to:
+## 6. Advertising and cross-service tracking
 
-- Investigate reports or abuse
-- Enforce safety rules and prohibited content policies
-- Prevent scams, fraud, or prohibited transactions
-- Respond to legal requests or credible safety threats
-- Preserve safety, audit, and moderation history
+ReSell’s sponsored-listing feature is a first-party marketplace promotion tool. ReSell does not currently sell personal information or use third-party advertising identifiers to track users across unrelated companies’ apps or websites for targeted advertising.
 
-We do not promise proactive review of all content, but we reserve the right to review and moderate content when needed for safety, integrity, compliance, or service operation. We aim to review and act on safety-related reports as quickly as reasonably possible, generally within 24 hours when practical.
+If these practices change, we will update this policy and any required consent and store disclosures before using the information for the new purpose.
 
-## 6. Data retention
+## 7. Retention
 
-We keep information for as long as needed to provide the Service and for legitimate business, security, safety, and legal purposes.
+We retain information for as long as reasonably needed for the purposes described in this policy. Retention depends on the type of information, account status, legal requirements, security needs, and whether information remains necessary for an active feature.
 
-Typical retention includes:
+Examples:
 
-- Account data is kept until you delete your account or it is removed for policy reasons.
-- Listings, profile content, favorites, and messages are generally kept until deletion or enforcement action, unless needed longer for safety, abuse prevention, fraud prevention, or legal obligations.
-- Reports, evidence attached to reports, block records, moderation snapshots, and related safety records may be retained for abuse prevention, legal compliance, audit, and platform integrity purposes even if an account is later deleted.
-- Backups and logs may retain limited data for a period of time before being overwritten or deleted through standard retention cycles.
+- Core account and public content are generally retained while the account is active.
+- Draft, active, expired, canceled, refunded, and disputed purchase or campaign records may be retained for financial reconciliation, fraud prevention, support, store compliance, tax, accounting, legal, and audit purposes.
+- Messages, reviews, sold-transaction records, analytics records, and user content may be retained until deleted, de-identified, expired, or removed, subject to safety and legal needs.
+- Reports, evidence, moderation snapshots, block records, and enforcement history may be retained after account deletion when reasonably necessary to prevent abuse, address disputes, comply with law, or protect users.
+- Backups and logs may remain for a limited period until overwritten through normal retention cycles.
 
-## 7. Account deletion
+We do not promise that every record is deleted immediately from all backups.
 
-You can delete your account in the app. When you delete your account, ReSell Marketplace removes, deletes, disables, or de-identifies core account content associated with your account, such as:
+## 8. Account and data deletion
 
-- Active access to your account
-- Your listings
-- Listing images, on a best-effort basis
-- Profile photo, on a best-effort basis
-- Password reset and pending signup records
-- Conversations and messages associated with your account, on a best-effort basis
+You can request deletion:
 
-Some limited information may be retained where required or reasonably necessary for law, security, abuse prevention, legal compliance, audit, and moderation purposes, including certain reports, report evidence, block records, and moderation snapshots.
+- In the app: **Profile → Menu → Account → Delete Account**
+- On the web: **https://www.resellmarketplace.app/delete-account**
+- By email: **resell21126@gmail.com**
 
-## 8. Your choices and controls
+Deletion removes access to the account and initiates deletion or de-identification of associated profile information, listings, user media, stories, events, favorites, and other account content handled by ReSell, subject to technical limitations and lawful retention.
 
-### 8.1 Location permissions
+Information may be retained when reasonably necessary for fraud prevention, security, moderation, legal compliance, accounting, purchase reconciliation, dispute resolution, or protection of users. Content already received or copied by another user may remain in that user’s possession. Some message or transaction context may be de-identified or retained to protect the integrity of another user’s records.
 
-You can allow or deny location permission through your device settings. If you deny location access, you can still use custom/manual location options where available.
+Deleting a ReSell account does not automatically cancel an Apple or Google subscription. Cancel recurring subscriptions in your App Store or Google Play account before or after deleting ReSell.
 
-### 8.2 Camera and photo permissions
+## 9. Your choices and rights
 
-You can allow or deny camera/photo access through your device settings. ReSell Marketplace requests image access only when you choose to add or upload images.
+You can:
 
-### 8.3 Notifications
+- Edit profile and listing information where the app permits
+- Delete listings, reviews, stories, events, or other content where supported
+- Favorite or unfavorite listings
+- Block or unblock users
+- Report content or users
+- Disable camera, photo, location, or notification permissions in device settings
+- Cancel or manage subscriptions through Apple or Google
+- Request account deletion
+- Contact us to request access, correction, deletion, or information about our processing
 
-You can enable or disable notifications through your device settings.
+Depending on your jurisdiction, you may have additional rights, including the right to object, restrict processing, receive a portable copy, or appeal a privacy-request decision. We may need to verify your identity before completing a request.
 
-### 8.4 Safety controls
+## 10. Security
 
-You can use in-app safety tools to:
+We use reasonable administrative, technical, and organizational safeguards designed to protect information, including password hashing, authenticated access, transport security, access controls, and purchase verification. No service is completely secure, and we cannot guarantee absolute security.
 
-- Report listings or users
-- Block users
-- Unblock users from the profile menu where supported
-- Submit optional screenshots or evidence images with reports
+## 11. Children
 
-### 8.5 Account controls
+ReSell is intended only for adults who are at least 18 years old. We do not knowingly permit children to create accounts. Contact us if you believe a minor has provided information.
 
-You can update certain profile information in the app and delete your account in the app.
+## 12. International processing
 
-## 9. Security
+ReSell is operated from the United States. Information may be processed in the United States and in other locations where our service providers operate. Those locations may have different privacy laws from your jurisdiction.
 
-We use reasonable administrative, technical, and physical safeguards designed to protect your information. However, no system is 100% secure, and we cannot guarantee absolute security.
+## 13. Third-party services and links
 
-## 10. Children’s privacy
+The Service may link to public websites, app-store subscription management, maps, email, or other third-party services. Their privacy practices are governed by their own policies.
 
-ReSell Marketplace is intended for adults. Users must be **18+**. We do not knowingly collect personal information from children.
+## 14. Changes to this policy
 
-## 11. International use
+We may update this Privacy Policy when features, providers, laws, or data practices change. We will update the effective date and provide additional notice or request acknowledgement when required.
 
-ReSell Marketplace is operated from the United States. If you use the Service from outside the United States, you understand your information may be transferred to and processed in the United States and other countries where our service providers operate.
+## 15. Contact
 
-## 12. Features not currently offered
+Privacy, legal, support, and deletion requests:
 
-As of version 2.0.0, ReSell Marketplace does not currently offer in-app subscriptions, paid marketplace events, payment processing, escrow, shipping, or general user-created story posting. If these features are introduced in a future update, we may update this Privacy Policy and related terms.
-
-## 13. Changes to this Privacy Policy
-
-We may update this Privacy Policy from time to time. We will update the effective date when changes are made. Continued use of the Service after changes means you accept the updated policy.
-
-## 14. Contact
-
-Questions or requests: **resell21126@gmail.com**
+**resell21126@gmail.com**
