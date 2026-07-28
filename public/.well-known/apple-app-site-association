@@ -6,7 +6,8 @@
         "appID": "VX23C3L9MD.com.rellik20.mobile",
         "paths": [
           "/u/*",
-          "/events/*"
+          "/events/*",
+          "/listings/*"
         ],
         "components": [
           {
@@ -15,6 +16,10 @@
           },
           {
             "/": "/events/*"
+          },
+          {
+            "/": "/listings/*",
+            "comment": "Open ReSell listing links in the app"
           }
         ]
       }
