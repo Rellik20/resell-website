@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { OpenInReSellButton } from "../../components/OpenInReSellButton";
 
 const SITE_URL = "https://www.resellmarketplace.app";
 const API_BASE_URL = process.env.RESELL_API_BASE_URL || "https://resell-v5y2.onrender.com";
@@ -162,12 +163,12 @@ export default async function PublicProfilePage({
           <p className="text-sm leading-6 text-[#A9AFBC]">
             Open ReSell Marketplace to browse listings, save favorites, and message buyers or sellers directly.
           </p>
-          <Link
-            href="/"
+          <OpenInReSellButton
+            routePath={`u/${user.username}`}
             className="mt-7 inline-flex min-w-[240px] items-center justify-center rounded-2xl border border-white/10 bg-[#252A34] px-6 py-3 text-sm font-semibold text-white shadow-[0_12px_30px_rgba(0,0,0,0.22)] transition hover:bg-[#2D3340]"
           >
             Open ReSell Marketplace
-          </Link>
+          </OpenInReSellButton>
         </div>
       </section>
     </main>

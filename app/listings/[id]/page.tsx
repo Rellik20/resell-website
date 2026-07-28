@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { ListingGallery } from "./ListingGallery";
-import { OpenInReSellButton } from "./OpenInReSellButton";
+import { OpenInReSellButton } from "../../components/OpenInReSellButton";
 
 const SITE_URL =
   "https://www.resellmarketplace.app";
@@ -430,8 +430,8 @@ export default async function ListingSharePage({
           ) : null}
 
           <OpenInReSellButton
-            listingId={listing.id}
-            className="mt-8 block rounded-2xl bg-[#78A3D7] px-6 py-4 text-center text-base font-black text-white transition hover:opacity-90"
+            routePath={`listings/${listing.id}`}
+            className="mt-8 block w-full rounded-2xl bg-[#78A3D7] px-6 py-4 text-center text-base font-black text-white transition hover:opacity-90"
           />
 
           <p className="mt-5 text-center text-xs leading-5 text-white/45">

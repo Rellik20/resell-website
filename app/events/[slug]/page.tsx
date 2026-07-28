@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { OpenInReSellButton } from "../../components/OpenInReSellButton";
 
 const SITE_URL = "https://www.resellmarketplace.app";
 const API_BASE_URL = process.env.RESELL_API_BASE_URL || "https://resell-v5y2.onrender.com";
@@ -245,9 +246,12 @@ export default async function EventSharePage({ params }: PageProps) {
 
           {event.description ? <p className="mt-6 text-base leading-7 text-white/72">{event.description}</p> : null}
 
-          <a href={safeUrl} className="mt-8 block rounded-2xl bg-[#78A3D7] px-6 py-4 text-center text-base font-black text-white transition hover:opacity-90">
+          <OpenInReSellButton
+            routePath={`events/${slug}`}
+            className="mt-8 block w-full rounded-2xl bg-[#78A3D7] px-6 py-4 text-center text-base font-black text-white transition hover:opacity-90"
+          >
             Open in ReSell
-          </a>
+          </OpenInReSellButton>
 
           <p className="mt-5 text-center text-xs leading-5 text-white/45">
             If the app is installed, this link opens the event in ReSell. If not, install ReSell Marketplace and sign in to respond.
