@@ -44,6 +44,21 @@ function cleanListingId(value: string) {
     : "";
 }
 
+function safePhotoUrls(value: unknown) {
+  if (!Array.isArray(value)) {
+    return [];
+  }
+
+  return value
+    .map((item) =>
+      String(item || "").trim()
+    )
+    .filter((url) =>
+      /^https:\/\//i.test(url)
+    )
+    .slice(0, 12);
+}
+
 function formatPrice(value: number) {
   const amount = Number(value);
 
@@ -163,7 +178,9 @@ export async function generateMetadata({
     listingDescription(listing);
 
   const image =
-    listing?.photos?.[0] ||
+    safePhotoUrls(
+      listing?.photos
+    )[0] ||
     `${SITE_URL}/og-profile.png`;
 
   return {
@@ -302,8 +319,10 @@ export default async function ListingSharePage({
     );
   }
 
-  const photo =
-    listing.photos?.[0] || "";
+  const photos =
+    safePhotoUrls(
+      listing.photos
+    );
 
   const price =
     formatPrice(listing.price);
@@ -321,16 +340,45 @@ export default async function ListingSharePage({
   return (
     <main className="min-h-screen bg-[#0f1420] px-5 py-10 text-white">
       <section className="mx-auto max-w-2xl overflow-hidden rounded-[34px] border border-white/10 bg-[#1C2230] shadow-2xl">
-        <div className="relative h-[340px] bg-[#1C2230]">
-          {photo ? (
-            // eslint-disable-next-line @next/next/no-img-element
-            <img
-              src={photo}
-              alt={listing.title}
-              className="h-full w-full object-cover"
-            />
+        <div className="relative overflow-hidden bg-[#1C2230]">
+          {photos.length > 0 ? (
+            <div
+              className="flex w-full snap-x snap-mandatory overflow-x-auto overscroll-x-contain"
+              style={{
+                scrollbarWidth:
+                  "none",
+              }}
+            >
+              {photos.map(
+                (
+                  photoUrl,
+                  index
+                ) => (
+                  <div
+                    key={`${photoUrl}-${index}`}
+                    className="relative h-[340px] min-w-full shrink-0 snap-center bg-[#1C2230]"
+                  >
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                      src={photoUrl}
+                      alt={`${listing.title} photo ${index + 1}`}
+                      className="h-full w-full object-cover"
+                      loading={
+                        index === 0
+                          ? "eager"
+                          : "lazy"
+                      }
+                      decoding="async"
+                      referrerPolicy="no-referrer"
+                    />
+
+                    <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#0f1420]/15 to-[#1C2230]" />
+                  </div>
+                )
+              )}
+            </div>
           ) : (
-            <div className="flex h-full items-center justify-center">
+            <div className="flex h-[340px] items-center justify-center">
               <Image
                 src="/resell-logo.png"
                 alt="ReSell Marketplace"
@@ -342,7 +390,11 @@ export default async function ListingSharePage({
             </div>
           )}
 
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#0f1420]/15 to-[#1C2230]" />
+          {photos.length > 1 ? (
+            <span className="absolute bottom-5 right-5 rounded-full border border-white/15 bg-black/65 px-4 py-2 text-xs font-bold text-white">
+              {photos.length} photos · Swipe
+            </span>
+          ) : null}
 
           {listing.status === "sold" ? (
             <span className="absolute left-5 top-5 rounded-full border border-white/20 bg-black/65 px-4 py-2 text-xs font-black uppercase tracking-[0.16em] text-white">
@@ -377,16 +429,16 @@ export default async function ListingSharePage({
             </div>
           </div>
 
-          <h1 className="mt-6 text-4xl font-black leading-tight tracking-tight">
+          <h1 className="mt-6 break-words text-4xl font-black leading-tight tracking-tight">
             {listing.title}
           </h1>
 
-          <div className="mt-6 grid gap-3">
+          <div className="mt-6 flex flex-col gap-3">
             {price ? (
-              <div className="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/[0.04] p-4">
+              <div className="flex min-w-0 items-center gap-3 rounded-2xl border border-white/10 bg-white/[0.04] p-4">
                 <DetailIcon type="price" />
 
-                <div>
+                <div className="min-w-0">
                   <p className="text-xs font-bold uppercase tracking-[0.16em] text-white/40">
                     Price
                   </p>
@@ -399,30 +451,30 @@ export default async function ListingSharePage({
             ) : null}
 
             {listing.locationLabel ? (
-              <div className="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/[0.04] p-4">
+              <div className="flex min-w-0 items-center gap-3 rounded-2xl border border-white/10 bg-white/[0.04] p-4">
                 <DetailIcon type="location" />
 
-                <div>
+                <div className="min-w-0">
                   <p className="text-xs font-bold uppercase tracking-[0.16em] text-white/40">
                     Location
                   </p>
 
-                  <p className="mt-1 text-sm font-bold text-white/85">
+                  <p className="mt-1 break-words text-sm font-bold text-white/85">
                     {listing.locationLabel}
                   </p>
                 </div>
               </div>
             ) : null}
 
-            <div className="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/[0.04] p-4">
+            <div className="flex min-w-0 items-center gap-3 rounded-2xl border border-white/10 bg-white/[0.04] p-4">
               <DetailIcon type="seller" />
 
-              <div>
+              <div className="min-w-0">
                 <p className="text-xs font-bold uppercase tracking-[0.16em] text-white/40">
                   Seller
                 </p>
 
-                <p className="mt-1 text-sm font-bold text-white/85">
+                <p className="mt-1 break-words text-sm font-bold text-white/85">
                   {seller}
                   {listing.sellerUsername
                     ? ` · @${listing.sellerUsername}`
@@ -433,7 +485,7 @@ export default async function ListingSharePage({
           </div>
 
           {listing.description ? (
-            <p className="mt-6 whitespace-pre-wrap text-base leading-7 text-white/72">
+            <p className="mt-6 whitespace-pre-wrap break-words text-base leading-7 text-white/72">
               {listing.description}
             </p>
           ) : null}
