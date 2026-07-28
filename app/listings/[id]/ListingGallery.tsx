@@ -55,9 +55,6 @@ export function ListingGallery({
   status,
   isSponsored,
 }: ListingGalleryProps) {
-  const mainRef =
-    useRef<HTMLDivElement>(null);
-
   const viewerRef =
     useRef<HTMLDivElement>(null);
 
@@ -101,25 +98,6 @@ export function ListingGallery({
     );
   }
 
-  function moveMain(
-    direction: -1 | 1
-  ) {
-    const next =
-      clampIndex(
-        activeIndexRef.current +
-          direction,
-        photos.length
-      );
-
-    updateIndex(next);
-
-    scrollToIndex(
-      mainRef,
-      next,
-      "smooth"
-    );
-  }
-
   function moveViewer(
     direction: -1 | 1
   ) {
@@ -148,14 +126,6 @@ export function ListingGallery({
 
   function closeViewer() {
     setViewerOpen(false);
-
-    requestAnimationFrame(() => {
-      scrollToIndex(
-        mainRef,
-        activeIndexRef.current,
-        "auto"
-      );
-    });
   }
 
   useEffect(() => {
@@ -227,64 +197,28 @@ export function ListingGallery({
 
   return (
     <>
-      <section className="relative overflow-hidden bg-[#0B0D12]">
-        <div
-          ref={mainRef}
-          onScroll={handleScroll}
-          className="flex w-full snap-x snap-mandatory overflow-x-auto overscroll-x-contain"
-          style={{
-            scrollbarWidth: "none",
-          }}
+      <section className="relative overflow-hidden bg-[#1C2230]">
+        <button
+          type="button"
+          onClick={() =>
+            openViewer(0)
+          }
+          className="relative block h-[340px] w-full overflow-hidden bg-[#1C2230] text-left"
+          aria-label={`Open all ${title} photos`}
         >
-          {photos.map(
-            (
-              photoUrl,
-              index
-            ) => (
-              <button
-                key={`${photoUrl}-${index}`}
-                type="button"
-                onClick={() =>
-                  openViewer(index)
-                }
-                className="relative min-w-full shrink-0 snap-center overflow-hidden bg-[#0B0D12] text-left"
-                style={{
-                  height:
-                    "clamp(190px, 45vw, 260px)",
-                }}
-                aria-label={`Open ${title} photo ${index + 1} full screen`}
-              >
-                {/* Decorative blurred fill behind the uncropped image. */}
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src={photoUrl}
-                  alt=""
-                  aria-hidden="true"
-                  className="hidden"
-                  draggable={false}
-                  referrerPolicy="no-referrer"
-                />
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src={photos[0]}
+            alt={`${title} listing photo`}
+            className="h-full w-full object-cover"
+            loading="eager"
+            decoding="async"
+            draggable={false}
+            referrerPolicy="no-referrer"
+          />
 
-                <span className="hidden" />
-
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src={photoUrl}
-                  alt={`${title} photo ${index + 1}`}
-                  className="relative z-10 h-full w-full object-contain p-4 sm:p-6"
-                  loading={
-                    index === 0
-                      ? "eager"
-                      : "lazy"
-                  }
-                  decoding="async"
-                  draggable={false}
-                  referrerPolicy="no-referrer"
-                />
-              </button>
-            )
-          )}
-        </div>
+          <span className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#1C2230]/45" />
+        </button>
 
         {status === "sold" ? (
           <span className="absolute left-4 top-4 z-20 rounded-full border border-white/20 bg-black/70 px-4 py-2 text-xs font-black uppercase tracking-[0.16em] text-white">
@@ -296,46 +230,14 @@ export function ListingGallery({
           </span>
         ) : null}
 
-        <span className="absolute bottom-4 left-4 z-20 rounded-full border border-white/15 bg-black/65 px-3 py-2 text-xs font-bold text-white/90 backdrop-blur-sm">
+        <span className="pointer-events-none absolute bottom-4 left-4 z-20 rounded-full border border-white/15 bg-black/65 px-3 py-2 text-xs font-bold text-white/90 backdrop-blur-sm">
           Tap to expand
         </span>
 
-        <span className="absolute bottom-4 left-1/2 z-20 -translate-x-1/2 rounded-full border border-white/15 bg-black/70 px-4 py-2 text-xs font-bold text-white backdrop-blur-sm">
-          {activeIndex + 1} of{" "}
-          {photos.length}
-        </span>
-
         {photos.length > 1 ? (
-          <>
-            <button
-              type="button"
-              onClick={() =>
-                moveMain(-1)
-              }
-              disabled={
-                activeIndex === 0
-              }
-              className="absolute left-3 top-1/2 z-20 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-white/15 bg-black/60 text-2xl text-white backdrop-blur-sm transition disabled:opacity-25"
-              aria-label="Previous listing photo"
-            >
-              ‹
-            </button>
-
-            <button
-              type="button"
-              onClick={() =>
-                moveMain(1)
-              }
-              disabled={
-                activeIndex ===
-                photos.length - 1
-              }
-              className="absolute right-3 top-1/2 z-20 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-white/15 bg-black/60 text-2xl text-white backdrop-blur-sm transition disabled:opacity-25"
-              aria-label="Next listing photo"
-            >
-              ›
-            </button>
-          </>
+          <span className="pointer-events-none absolute bottom-4 right-4 z-20 rounded-full border border-white/15 bg-black/70 px-4 py-2 text-xs font-bold text-white backdrop-blur-sm">
+            1 of {photos.length}
+          </span>
         ) : null}
       </section>
 
