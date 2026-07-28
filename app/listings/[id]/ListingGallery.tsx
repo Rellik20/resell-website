@@ -214,7 +214,7 @@ export function ListingGallery({
 
   if (!photos.length) {
     return (
-      <div className="flex h-[380px] items-center justify-center bg-[#0B0D12]">
+      <div className="flex h-[280px] items-center justify-center bg-[#0B0D12] sm:h-[340px]">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src="/resell-logo.png"
@@ -250,7 +250,7 @@ export function ListingGallery({
                 className="relative min-w-full shrink-0 snap-center overflow-hidden bg-[#0B0D12] text-left"
                 style={{
                   height:
-                    "clamp(360px, 76vw, 520px)",
+                    "clamp(250px, 58vw, 360px)",
                 }}
                 aria-label={`Open ${title} photo ${index + 1} full screen`}
               >
