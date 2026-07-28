@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { ListingGallery } from "./ListingGallery";
 
 const SITE_URL =
   "https://www.resellmarketplace.app";
@@ -340,72 +341,12 @@ export default async function ListingSharePage({
   return (
     <main className="min-h-screen bg-[#0f1420] px-5 py-10 text-white">
       <section className="mx-auto max-w-2xl overflow-hidden rounded-[34px] border border-white/10 bg-[#1C2230] shadow-2xl">
-        <div className="relative overflow-hidden bg-[#1C2230]">
-          {photos.length > 0 ? (
-            <div
-              className="flex w-full snap-x snap-mandatory overflow-x-auto overscroll-x-contain"
-              style={{
-                scrollbarWidth:
-                  "none",
-              }}
-            >
-              {photos.map(
-                (
-                  photoUrl,
-                  index
-                ) => (
-                  <div
-                    key={`${photoUrl}-${index}`}
-                    className="relative h-[340px] min-w-full shrink-0 snap-center bg-[#1C2230]"
-                  >
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img
-                      src={photoUrl}
-                      alt={`${listing.title} photo ${index + 1}`}
-                      className="h-full w-full object-cover"
-                      loading={
-                        index === 0
-                          ? "eager"
-                          : "lazy"
-                      }
-                      decoding="async"
-                      referrerPolicy="no-referrer"
-                    />
-
-                    <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#0f1420]/15 to-[#1C2230]" />
-                  </div>
-                )
-              )}
-            </div>
-          ) : (
-            <div className="flex h-[340px] items-center justify-center">
-              <Image
-                src="/resell-logo.png"
-                alt="ReSell Marketplace"
-                width={96}
-                height={96}
-                priority
-                className="rounded-3xl"
-              />
-            </div>
-          )}
-
-          {photos.length > 1 ? (
-            <span className="absolute bottom-5 right-5 rounded-full border border-white/15 bg-black/65 px-4 py-2 text-xs font-bold text-white">
-              {photos.length} photos · Swipe
-            </span>
-          ) : null}
-
-          {listing.status === "sold" ? (
-            <span className="absolute left-5 top-5 rounded-full border border-white/20 bg-black/65 px-4 py-2 text-xs font-black uppercase tracking-[0.16em] text-white">
-              Sold
-            </span>
-          ) : isSponsored ? (
-            <span className="absolute left-5 top-5 rounded-full border border-[#78A3D7]/40 bg-[#1C2230]/90 px-4 py-2 text-xs font-black uppercase tracking-[0.16em] text-[#AFCDF3]">
-              Sponsored
-            </span>
-          ) : null}
-        </div>
+        <ListingGallery
+          photos={photos}
+          title={listing.title}
+          status={listing.status}
+          isSponsored={isSponsored}
+        />
 
         <div className="p-7">
           <div className="flex items-center gap-3">
