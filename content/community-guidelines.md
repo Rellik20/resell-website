@@ -1,6 +1,7 @@
 # Community Guidelines
 
-**Effective date:** July 19, 2026
+**Effective date:** July 28, 2026
+**Policy version:** 2026-07-28-v3
 **Contact:** resell21126@gmail.com
 
 ReSell is an adult local marketplace built around lawful secondhand commerce, respectful communication, accurate listings, and user safety. These Guidelines apply to listings, profiles, usernames, photos, stories, events, reviews, messages, advertisements, reports, and all other activity.

@@ -4,7 +4,8 @@ title: Terms of Service
 
 # Terms of Service
 
-**Effective date:** July 19, 2026
+**Effective date:** July 28, 2026
+**Policy version:** 2026-07-28-v3
 **Operator:** Scott Cote, operating ReSell Marketplace (“ReSell,” “we,” “us,” or “our”)
 **Contact:** resell21126@gmail.com
 
@@ -30,7 +31,7 @@ Depending on availability, ReSell may provide:
 - Sponsored-listing campaigns
 - ReSell Pro subscriptions
 - A separate paid profile badge
-- Public profile and event links on the ReSell website
+- Guest marketplace browsing and public listing, profile, and event links on the ReSell website
 
 Features may be added, changed, suspended, tested, limited by platform, or removed.
 
@@ -43,6 +44,8 @@ Buyers and sellers are responsible for inspecting items, selecting safe meeting 
 ## 4. Accounts and security
 
 You agree to provide accurate information, maintain a valid email address, protect login credentials, use only authorized accounts, and notify us of suspected compromise. You may not create accounts to evade blocks, restrictions, suspensions, or moderation.
+
+New account creation through email, Apple, or Google requires an affirmative confirmation that the user is at least 18, agrees to the Terms of Service, Subscription Terms, and Community Guidelines, and acknowledges the Privacy Policy. ReSell records the applicable policy version and acceptance time. Existing users may be required to acknowledge material policy updates before continuing.
 
 We may verify account access, assign public and internal identifiers, restrict features, require policy acknowledgement, or disable an account for security, legal, fraud, safety, or policy reasons.
 

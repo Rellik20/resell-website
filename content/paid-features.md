@@ -4,7 +4,8 @@ title: Paid Features Terms
 
 # Paid Features Terms
 
-**Effective date:** July 19, 2026
+**Effective date:** July 28, 2026
+**Policy version:** 2026-07-28-v3
 
 These Paid Features Terms apply to one-time digital purchases, including sponsored-listing campaigns, and supplement the Terms of Service.
 

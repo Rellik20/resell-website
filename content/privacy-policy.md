@@ -4,11 +4,12 @@ title: Privacy Policy
 
 # Privacy Policy
 
-**Effective date:** July 19, 2026
+**Effective date:** July 28, 2026
+**Policy version:** 2026-07-28-v3
 **Operator:** Scott Cote, operating ReSell Marketplace (“ReSell,” “we,” “us,” or “our”)
 **Contact:** resell21126@gmail.com
 
-This Privacy Policy explains how ReSell collects, uses, discloses, stores, and protects information when you use the ReSell Marketplace mobile application, website, public profile and event pages, application programming interfaces, and related services (collectively, the “Service”).
+This Privacy Policy explains how ReSell collects, uses, discloses, stores, and protects information when you use the ReSell Marketplace mobile application, website, public listing, profile, and event pages, application programming interfaces, and related services (collectively, the “Service”).
 
 ReSell is a user-generated local marketplace for adults. Depending on the version and features available to you, the Service may allow users to create public profiles and listings, upload photos and stories, create or view events, search for listings or people, favorite listings, message other users, review marketplace participants, use seller analytics, purchase sponsored-listing campaigns, subscribe to ReSell Pro or a separate profile badge, and use reporting, blocking, and account-deletion controls.
 
@@ -21,6 +22,8 @@ We do not sell personal information. ReSell’s own sponsored-listing system pro
 We may collect:
 
 - Email address
+- Sign-in method, such as email and password, Apple, or Google
+- Provider-specific account identifier needed to securely recognize an Apple or Google account
 - Password hash; we do not store plaintext passwords
 - Email-verification and password-reset records
 - Username, first and last name, country, biography, and profile photo
