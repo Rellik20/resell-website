@@ -214,7 +214,7 @@ export function ListingGallery({
 
   if (!photos.length) {
     return (
-      <div className="flex h-[280px] items-center justify-center bg-[#0B0D12] sm:h-[340px]">
+      <div className="flex h-[200px] items-center justify-center bg-[#0B0D12] sm:h-[240px]">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src="/resell-logo.png"
@@ -250,7 +250,7 @@ export function ListingGallery({
                 className="relative min-w-full shrink-0 snap-center overflow-hidden bg-[#0B0D12] text-left"
                 style={{
                   height:
-                    "clamp(250px, 58vw, 360px)",
+                    "clamp(190px, 45vw, 260px)",
                 }}
                 aria-label={`Open ${title} photo ${index + 1} full screen`}
               >
@@ -260,18 +260,18 @@ export function ListingGallery({
                   src={photoUrl}
                   alt=""
                   aria-hidden="true"
-                  className="absolute inset-0 h-full w-full scale-110 object-cover opacity-30 blur-2xl"
+                  className="hidden"
                   draggable={false}
                   referrerPolicy="no-referrer"
                 />
 
-                <span className="absolute inset-0 bg-black/28" />
+                <span className="hidden" />
 
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src={photoUrl}
                   alt={`${title} photo ${index + 1}`}
-                  className="relative z-10 h-full w-full object-contain"
+                  className="relative z-10 h-full w-full object-contain p-4 sm:p-6"
                   loading={
                     index === 0
                       ? "eager"

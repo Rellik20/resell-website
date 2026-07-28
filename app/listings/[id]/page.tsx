@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { ListingGallery } from "./ListingGallery";
+import { OpenInReSellButton } from "./OpenInReSellButton";
 
 const SITE_URL =
   "https://www.resellmarketplace.app";
@@ -281,9 +282,6 @@ export default async function ListingSharePage({
   const listing =
     await getListing(id);
 
-  const safeUrl =
-    `${SITE_URL}/listings/${encodeURIComponent(id)}`;
-
   if (!listing) {
     return (
       <main className="min-h-screen bg-[#0f1420] px-5 py-10 text-white">
@@ -431,12 +429,10 @@ export default async function ListingSharePage({
             </p>
           ) : null}
 
-          <a
-            href={safeUrl}
+          <OpenInReSellButton
+            listingId={listing.id}
             className="mt-8 block rounded-2xl bg-[#78A3D7] px-6 py-4 text-center text-base font-black text-white transition hover:opacity-90"
-          >
-            Open in ReSell
-          </a>
+          />
 
           <p className="mt-5 text-center text-xs leading-5 text-white/45">
             If ReSell is installed, this link opens the listing directly in the app.
