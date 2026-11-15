@@ -1,6 +1,6 @@
 # Delete Your ReSell Account
 
-**Last updated:** November 15, 2026
+**Last updated:** 15 November 2026
 **Policy version:** 2026-11-15-v1
 
 ReSell provides an in-app deletion option and this external deletion resource.

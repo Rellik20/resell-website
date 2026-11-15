@@ -4,7 +4,7 @@ title: Subscription Terms
 
 # Subscription Terms
 
-**Effective date:** November 15, 2026
+**Effective date:** 15 November 2026
 **Policy version:** 2026-11-15-v1
 
 These Subscription Terms apply when ReSell enables an auto-renewing ReSell Pro subscription or a separate auto-renewing profile-badge subscription. They supplement the Terms of Service.

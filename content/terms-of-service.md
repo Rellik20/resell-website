@@ -4,7 +4,7 @@ title: Terms of Service
 
 # Terms of Service
 
-**Effective date:** November 15, 2026
+**Effective date:** 15 November 2026
 **Policy version:** 2026-11-15-v1
 **Operator:** Scott Cote, operating ReSell Marketplace (“ReSell,” “we,” “us,” or “our”)
 **Contact:** resell21126@gmail.com
