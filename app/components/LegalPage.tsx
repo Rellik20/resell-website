@@ -1,5 +1,4 @@
-import Image from "next/image";
-import Link from "next/link";
+import { SiteHeader, SiteFooter } from "./SiteChrome";
 import fs from "fs";
 import path from "path";
 
@@ -84,46 +83,27 @@ function markdownToHtml(markdown: string) {
 export default function LegalPage({
   fileName,
   eyebrow,
+  plain = false,
 }: {
   fileName: string;
   eyebrow: string;
+  plain?: boolean;
 }) {
   const filePath = path.join(process.cwd(), "content", fileName);
   const markdown = fs.readFileSync(filePath, "utf8");
   const html = markdownToHtml(markdown);
 
   return (
-    <main className="site-shell">
-      <nav className="nav">
-        <Link className="brand" href="/">
-          <Image className="brand-logo" src="/resell-logo.png" alt="ReSell Marketplace logo" width={42} height={42} />
-          <span>ReSell Marketplace</span>
-        </Link>
-        <div className="nav-links">
-          <Link href="/privacy">Privacy</Link>
-          <Link href="/terms">Terms</Link>
-          <Link href="/support">Support</Link>
-        </div>
-      </nav>
-
-      <article className="legal-card">
-        <p className="eyebrow">{eyebrow}</p>
-        <div className="legal-content" dangerouslySetInnerHTML={{ __html: html }} />
+    <main className="site-shell resell-interior">
+      <SiteHeader />
+      <article className={`rs-prose rs-rise${plain ? " rs-credits" : ""}`}>
+        <p className="rs-eyebrow">{eyebrow}</p>
+        <div
+          className="legal-content"
+          dangerouslySetInnerHTML={{ __html: html }}
+        />
       </article>
-
-      <footer className="footer">
-        <div>© {new Date().getFullYear()} ReSell Marketplace</div>
-        <div className="footer-links">
-          <Link href="/">Home</Link>
-          <Link href="/privacy">Privacy Policy</Link>
-          <Link href="/terms">Terms of Service</Link>
-          <Link href="/community-guidelines">Community Guidelines</Link>
-          <Link href="/subscription-terms">Subscription Terms</Link>
-          <Link href="/paid-features">Paid Features</Link>
-          <Link href="/delete-account">Delete Account</Link>
-          <Link href="/support">Support</Link>
-        </div>
-      </footer>
+      <SiteFooter />
     </main>
   );
 }

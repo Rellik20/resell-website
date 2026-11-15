@@ -1,7 +1,7 @@
 # Community Guidelines
 
-**Effective date:** July 28, 2026
-**Policy version:** 2026-07-28-v3
+**Effective date:** November 15, 2026
+**Policy version:** 2026-11-15-v1
 **Contact:** resell21126@gmail.com
 
 ReSell is an adult local marketplace built around lawful secondhand commerce, respectful communication, accurate listings, and user safety. These Guidelines apply to listings, profiles, usernames, photos, stories, events, reviews, messages, advertisements, reports, and all other activity.
@@ -93,6 +93,7 @@ Do not:
 - Impersonate a person, business, charity, school, authority, or ReSell staff member
 - Create fake reviews, fake engagement, fake impressions, fake clicks, or coordinated ranking manipulation
 - Use bots, scripts, multiple accounts, or deceptive behavior to manipulate paid or organic visibility
+- Create duplicate accounts, automate publication, or otherwise evade the free daily listing allowance or applicable anti-spam restrictions
 
 ## 7. Privacy and personal information
 
@@ -151,7 +152,7 @@ Do not:
 - Claim that ReSell endorses or guarantees a sponsored seller
 - Describe a paid profile badge as identity verification, background verification, authenticity verification, or a safety guarantee
 
-Paid status never exempts a user from moderation.
+Paid status never exempts a user from moderation. Unlimited daily listings through an eligible ReSell Pro entitlement do not permit duplicate-listing spam, prohibited content, misleading advertisements, or abusive automated activity. A paid Pro Badge does not increase the free daily listing limit.
 
 ## 13. Intellectual property
 

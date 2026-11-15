@@ -4,8 +4,8 @@ title: Terms of Service
 
 # Terms of Service
 
-**Effective date:** July 28, 2026
-**Policy version:** 2026-07-28-v3
+**Effective date:** November 15, 2026
+**Policy version:** 2026-11-15-v1
 **Operator:** Scott Cote, operating ReSell Marketplace (“ReSell,” “we,” “us,” or “our”)
 **Contact:** resell21126@gmail.com
 
@@ -63,6 +63,8 @@ Listings must accurately describe a lawful item, price, condition, availability,
 
 ReSell may hide, remove, preserve, restrict, or re-rank listings at any time for safety, legal, quality, technical, promotional, or policy reasons.
 
+Free accounts may publish up to **three new listings per UTC calendar day**. The daily allowance resets at 00:00 UTC. An account with an eligible active ReSell Pro entitlement may publish unlimited new listings without this daily numerical limit. Unlimited listings do not permit spam, duplicate or misleading content, automated abuse, prohibited items, or attempts to evade moderation. ReSell may enforce separate reasonable safety, technical, and anti-abuse restrictions. A separately purchased Pro Badge does not increase the daily listing allowance.
+
 ## 7. Profiles, search, location, and favorites
 
 Public profile information and public content may be visible to users and website visitors. ReSell may use private coordinates to provide nearby results while showing an approximate public location.
@@ -106,7 +108,7 @@ Campaign metrics may be estimated, delayed, deduplicated, corrected, or affected
 
 ## 13. ReSell Pro and paid profile badge
 
-When enabled, ReSell Pro is an auto-renewing subscription that may provide seller tools, stories, analytics, ranking priority above free sellers, and other listed benefits.
+When enabled, ReSell Pro is an auto-renewing subscription that includes unlimited daily listing publication while the account has an eligible active Pro entitlement, subject to marketplace rules. It may also provide seller tools, stories, analytics, ranking priority above free sellers, and other listed benefits.
 
 A separate paid profile badge may be offered. The badge is visual only. It does not mean ReSell verified identity, ownership, background, trustworthiness, expertise, item authenticity, or transaction safety. It does not guarantee ranking unless the purchase screen expressly says otherwise.
 
@@ -130,7 +132,7 @@ You may provide feedback. You grant ReSell permission to use feedback without re
 
 ## 17. Account deletion and termination
 
-You may delete your account in the app or request deletion through the Account Deletion page. Deletion does not automatically cancel store subscriptions and may not erase limited safety, fraud, legal, accounting, or purchase records that ReSell is entitled or required to retain.
+You may request account deletion in the app or through the Account Deletion page. An accepted in-app request disables access and schedules permanent deletion after a 30-day recovery period. Eligible users may restore their account before the scheduled deadline using Account Recovery and email verification. After the deadline, recovery is unavailable and permanent cleanup is processed, subject to lawful retention and technical processing. Deletion does not automatically cancel store subscriptions and may not erase limited safety, fraud, legal, accounting, or purchase records that ReSell is entitled or required to retain.
 
 ReSell may suspend, restrict, disable, or terminate an account or content for policy violations, security, fraud, legal compliance, safety, or discontinuation of the Service.
 

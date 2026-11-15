@@ -1,6 +1,7 @@
 # Delete Your ReSell Account
 
-**Last updated:** July 19, 2026
+**Last updated:** November 15, 2026
+**Policy version:** 2026-11-15-v1
 
 ReSell provides an in-app deletion option and this external deletion resource.
 
@@ -13,7 +14,13 @@ ReSell provides an in-app deletion option and this external deletion resource.
 5. Select **Account**.
 6. Select **Delete Account** and confirm.
 
-The deletion action is permanent for the ReSell account and cannot be undone.
+After confirmation, ReSell disables account access and schedules permanent deletion after a 30-day recovery period. This is an account-deletion request, not merely a temporary suspension. If the account is not recovered before its deadline, permanent cleanup is processed.
+
+## Recover your account during the 30-day period
+
+If you change your mind before the scheduled deletion deadline, open ReSell's Account Recovery option from the sign-in flow. Enter the email address registered to your account and request a six-digit verification code. Eligible users can confirm the code and restore their existing account before the deadline.
+
+Recovery is unavailable after the deletion deadline or once permanent processing begins. Accounts disabled for unrelated safety or administrative reasons are not automatically eligible. Never share your recovery code.
 
 ## Request deletion without the app
 
@@ -69,7 +76,9 @@ Cancel recurring subscriptions in your App Store or Google Play account. Account
 
 ## Timing and confirmation
 
-We process verified requests as reasonably soon as practical. Complex safety, legal, or purchase issues may require additional review. You may contact us for status.
+For an accepted in-app deletion request, the 30-day recovery period begins when ReSell schedules deletion. Account access is disabled during this period. If no eligible recovery occurs, permanent cleanup is processed on or after the scheduled deadline. Technical processing and legally required retention may affect when particular records are fully removed.
+
+For requests sent by email, we may first verify account ownership and confirm when deletion has been scheduled. Contact us for status, questions about retained data, or applicable privacy-rights requests, including earlier deletion where required by law.
 
 ## Contact
 

@@ -4,10 +4,12 @@ title: Paid Features Terms
 
 # Paid Features Terms
 
-**Effective date:** July 28, 2026
-**Policy version:** 2026-07-28-v3
+**Effective date:** November 15, 2026
+**Policy version:** 2026-11-15-v1
 
 These Paid Features Terms apply to one-time digital purchases, including sponsored-listing campaigns, and supplement the Terms of Service.
+
+Sponsored-listing purchases are separate from ReSell Pro and Pro Badge subscriptions. Unlimited daily listing publication under ReSell Pro does not automatically include free sponsored campaigns, guaranteed advertising credits, or paid placement unless a particular offer explicitly provides them. Free accounts remain subject to the three-new-listings-per-UTC-day publication allowance.
 
 ## 1. Store purchase
 

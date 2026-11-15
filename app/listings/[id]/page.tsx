@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ListingGallery } from "./ListingGallery";
 import { OpenInReSellButton } from "../../components/OpenInReSellButton";
+import { SiteHeader, SiteFooter } from "../../components/SiteChrome";
 
 const SITE_URL =
   "https://www.resellmarketplace.app";
@@ -284,8 +285,9 @@ export default async function ListingSharePage({
 
   if (!listing) {
     return (
-      <main className="min-h-screen bg-[#0f1420] px-5 py-10 text-white">
-        <section className="mx-auto flex max-w-xl flex-col items-center rounded-[32px] border border-white/10 bg-white/[0.06] p-8 text-center shadow-2xl">
+      <main className="site-shell resell-interior">
+      <SiteHeader />
+        <section className="mx-auto my-16 flex max-w-xl flex-col items-center px-4 py-12 text-center">
           <Image
             src="/resell-logo.png"
             alt="ReSell Marketplace"
@@ -314,7 +316,8 @@ export default async function ListingSharePage({
             Go to ReSell Marketplace
           </Link>
         </section>
-      </main>
+        <SiteFooter />
+    </main>
     );
   }
 
@@ -337,8 +340,9 @@ export default async function ListingSharePage({
     );
 
   return (
-    <main className="min-h-screen bg-[#0f1420] px-5 py-10 text-white">
-      <section className="mx-auto max-w-2xl overflow-hidden rounded-[34px] border border-white/10 bg-[#1C2230] shadow-2xl">
+    <main className="site-shell resell-interior">
+      <SiteHeader />
+      <section className="mx-auto my-12 max-w-2xl overflow-hidden rounded-[28px]">
         <ListingGallery
           photos={photos}
           title={listing.title}
@@ -346,7 +350,7 @@ export default async function ListingSharePage({
           isSponsored={isSponsored}
         />
 
-        <div className="p-7">
+        <div className="px-2 pb-10 pt-8 sm:px-6">
           <div className="flex items-center gap-3">
             <Image
               src="/resell-logo.png"
@@ -368,13 +372,13 @@ export default async function ListingSharePage({
             </div>
           </div>
 
-          <h1 className="mt-6 break-words text-4xl font-black leading-tight tracking-tight">
+          <h1 className="mt-6 break-words text-3xl font-bold leading-tight tracking-tight sm:text-4xl">
             {listing.title}
           </h1>
 
           <div className="mt-6 flex flex-col gap-3">
             {price ? (
-              <div className="flex min-w-0 items-center gap-3 rounded-2xl border border-white/10 bg-white/[0.04] p-4">
+              <div className="flex min-w-0 items-center gap-3 border-b border-white/10 py-4">
                 <DetailIcon type="price" />
 
                 <div className="min-w-0">
@@ -390,7 +394,7 @@ export default async function ListingSharePage({
             ) : null}
 
             {listing.locationLabel ? (
-              <div className="flex min-w-0 items-center gap-3 rounded-2xl border border-white/10 bg-white/[0.04] p-4">
+              <div className="flex min-w-0 items-center gap-3 border-b border-white/10 py-4">
                 <DetailIcon type="location" />
 
                 <div className="min-w-0">
@@ -405,7 +409,7 @@ export default async function ListingSharePage({
               </div>
             ) : null}
 
-            <div className="flex min-w-0 items-center gap-3 rounded-2xl border border-white/10 bg-white/[0.04] p-4">
+            <div className="flex min-w-0 items-center gap-3 border-b border-white/10 py-4">
               <DetailIcon type="seller" />
 
               <div className="min-w-0">
@@ -431,7 +435,7 @@ export default async function ListingSharePage({
 
           <OpenInReSellButton
             routePath={`listings/${listing.id}`}
-            className="mt-8 block w-full rounded-2xl bg-[#78A3D7] px-6 py-4 text-center text-base font-black text-white transition hover:opacity-90"
+            className="mt-8 block rounded-full bg-[#78A3D7] px-6 py-4 text-center text-sm font-bold text-white transition hover:opacity-90"
           />
 
           <p className="mt-5 text-center text-xs leading-5 text-white/45">
@@ -439,6 +443,7 @@ export default async function ListingSharePage({
           </p>
         </div>
       </section>
+      <SiteFooter />
     </main>
   );
 }

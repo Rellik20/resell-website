@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { SiteHeader, SiteFooter } from "../../components/SiteChrome";
 import { OpenInReSellButton } from "../../components/OpenInReSellButton";
 
 const SITE_URL = "https://www.resellmarketplace.app";
@@ -110,27 +111,30 @@ export default async function PublicProfilePage({
 
   if (!user) {
     return (
-      <main className="min-h-screen bg-[#141823] px-6 py-10 text-white">
-        <section className="mx-auto flex max-w-xl flex-col items-center rounded-[28px] border border-white/10 bg-[#1C222E] p-8 text-center shadow-2xl">
+      <main className="site-shell resell-interior">
+      <SiteHeader />
+        <section className="rs-rise mx-auto my-16 flex max-w-xl flex-col items-center px-4 py-12 text-center">
           <Image src="/resell-logo.png" alt="ReSell Marketplace" width={88} height={88} priority className="rounded-2xl" />
           <h1 className="mt-6 text-3xl font-semibold">Profile not found</h1>
           <p className="mt-3 text-sm leading-6 text-[#A9AFBC]">
             This ReSell profile may not exist yet, or the user may have changed their username.
           </p>
-          <Link href="/" className="mt-7 inline-flex min-w-[240px] items-center justify-center rounded-2xl border border-white/10 bg-[#252A34] px-6 py-3 text-sm font-semibold text-white shadow-[0_12px_30px_rgba(0,0,0,0.22)] transition hover:bg-[#2D3340]">
+          <Link href="/" className="mt-7 inline-flex w-full max-w-[260px] items-center justify-center rounded-full border border-white/20 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/10">
             Go to ReSell Marketplace
           </Link>
         </section>
-      </main>
+        <SiteFooter />
+    </main>
     );
   }
 
   const name = displayName(user);
 
   return (
-    <main className="min-h-screen bg-[#141823] px-6 py-10 text-white">
-      <section className="mx-auto max-w-xl overflow-hidden rounded-[32px] border border-white/10 bg-[#1C222E] shadow-2xl">
-        <div className="bg-gradient-to-b from-[#3E454E] to-transparent px-8 pb-10 pt-8 text-center">
+    <main className="site-shell resell-interior">
+      <SiteHeader />
+      <section className="rs-rise mx-auto my-12 max-w-xl">
+        <div className="px-4 pb-9 pt-8 text-center sm:px-8">
           <Image src="/resell-logo.png" alt="ReSell Marketplace" width={64} height={64} priority className="mx-auto rounded-2xl" />
 
           <div className="mx-auto mt-8 flex h-32 w-32 items-center justify-center overflow-hidden rounded-full bg-[#3A4149] ring-4 ring-white/10">
@@ -145,12 +149,12 @@ export default async function PublicProfilePage({
           <h1 className="mt-5 text-3xl font-semibold tracking-tight">{name}</h1>
           <p className="mt-2 text-lg text-[#DADEE3]">@{user.username}</p>
 
-          <div className="mt-5 flex justify-center gap-3">
+          <div className="mt-5 flex flex-wrap justify-center gap-3">
             {user.country ? (
-              <span className="rounded-full bg-[#464775] px-4 py-2 text-sm text-white">{user.country}</span>
+              <span className="rounded-full border border-white/15 px-4 py-2 text-sm text-white">{user.country}</span>
             ) : null}
             {user.verified ? (
-              <span className="rounded-full bg-[#5B414F] px-4 py-2 text-sm text-white">Verified</span>
+              <span className="rounded-full border border-white/15 px-4 py-2 text-sm text-white">Verified</span>
             ) : null}
           </div>
 
@@ -159,18 +163,19 @@ export default async function PublicProfilePage({
           ) : null}
         </div>
 
-        <div className="px-8 pb-8 text-center">
+        <div className="border-t border-white/10 px-4 pb-10 pt-7 text-center sm:px-8">
           <p className="text-sm leading-6 text-[#A9AFBC]">
             Open ReSell Marketplace to browse listings, save favorites, and message buyers or sellers directly.
           </p>
           <OpenInReSellButton
             routePath={`u/${user.username}`}
-            className="mt-7 inline-flex min-w-[240px] items-center justify-center rounded-2xl border border-white/10 bg-[#252A34] px-6 py-3 text-sm font-semibold text-white shadow-[0_12px_30px_rgba(0,0,0,0.22)] transition hover:bg-[#2D3340]"
+            className="mt-7 inline-flex w-full max-w-[260px] items-center justify-center rounded-full border border-white/20 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
           >
             Open ReSell Marketplace
           </OpenInReSellButton>
         </div>
       </section>
+      <SiteFooter />
     </main>
   );
 }

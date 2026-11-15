@@ -4,8 +4,8 @@ title: Privacy Policy
 
 # Privacy Policy
 
-**Effective date:** July 28, 2026
-**Policy version:** 2026-07-28-v3
+**Effective date:** November 15, 2026
+**Policy version:** 2026-11-15-v1
 **Operator:** Scott Cote, operating ReSell Marketplace (“ReSell,” “we,” “us,” or “our”)
 **Contact:** resell21126@gmail.com
 
@@ -26,6 +26,7 @@ We may collect:
 - Provider-specific account identifier needed to securely recognize an Apple or Google account
 - Password hash; we do not store plaintext passwords
 - Email-verification and password-reset records
+- Account-recovery verification records, scheduled-deletion dates, recovery eligibility, and restoration status
 - Username, first and last name, country, biography, and profile photo
 - Internal account ID and public ReSell User ID
 - Account creation, update, login, policy-acceptance, and deletion timestamps
@@ -84,6 +85,7 @@ We may process:
 - Message leads associated with marketplace listings
 - Story and event interactions
 - Seller totals and per-listing analytics
+- Daily listing-quota dates, usage counts, remaining allowances, and verified subscription-entitlement status
 - Sponsored-listing impressions, clicks, click-through rate, campaign duration, and campaign status
 
 Seller analytics are intended to help sellers understand activity. Counts may be delayed, estimated, deduplicated, filtered, or corrected and are not guaranteed to be complete.
@@ -268,7 +270,7 @@ You can request deletion:
 - On the web: **https://www.resellmarketplace.app/delete-account**
 - By email: **resell21126@gmail.com**
 
-Deletion removes access to the account and initiates deletion or de-identification of associated profile information, listings, user media, stories, events, favorites, and other account content handled by ReSell, subject to technical limitations and lawful retention.
+When an in-app account-deletion request is accepted, ReSell disables account access, invalidates active sessions, and schedules permanent account and associated-data cleanup after a 30-day recovery period. During that period, an eligible account holder may request an email verification code through Account Recovery and restore the same account before the scheduled deadline. Successful recovery cancels the scheduled deletion. After the deadline, recovery is no longer available, and ReSell processes permanent deletion or de-identification of associated account information, listings, user media, stories, events, favorites, and other account content, subject to necessary processing time and lawful retention. Requests submitted by email may require identity verification before deletion is scheduled.
 
 Information may be retained when reasonably necessary for fraud prevention, security, moderation, legal compliance, accounting, purchase reconciliation, dispute resolution, or protection of users. Content already received or copied by another user may remain in that user’s possession. Some message or transaction context may be de-identified or retained to protect the integrity of another user’s records.
 

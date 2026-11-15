@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { SiteHeader, SiteFooter } from "../../components/SiteChrome";
 import { OpenInReSellButton } from "../../components/OpenInReSellButton";
 
 const SITE_URL = "https://www.resellmarketplace.app";
@@ -102,7 +103,7 @@ function InfoIcon({ type }: { type: "date" | "location" | "price" }) {
   };
 
   return (
-    <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl border border-[#D19759]/35 bg-[#D19759]/15">
+    <span className="flex h-10 w-10 shrink-0 items-center justify-center">
       <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="#D19759" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         {paths[type]}
       </svg>
@@ -153,12 +154,12 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 export default async function EventSharePage({ params }: PageProps) {
   const { slug } = await params;
   const event = await getEvent(slug);
-  const safeUrl = `${SITE_URL}/events/${encodeURIComponent(slug)}`;
 
   if (!event) {
     return (
-      <main className="min-h-screen bg-[#0f1420] px-5 py-10 text-white">
-        <section className="mx-auto flex max-w-xl flex-col items-center rounded-[32px] border border-white/10 bg-white/[0.06] p-8 text-center shadow-2xl">
+      <main className="site-shell resell-interior">
+      <SiteHeader />
+        <section className="mx-auto my-16 flex max-w-xl flex-col items-center px-4 py-12 text-center">
           <Image src="/resell-logo.png" alt="ReSell Marketplace" width={82} height={82} priority className="rounded-2xl" />
           <p className="mt-6 text-sm font-semibold uppercase tracking-[0.24em] text-[#D19759]">ReSell Marketplace</p>
           <h1 className="mt-3 text-3xl font-black tracking-tight">Event unavailable</h1>
@@ -169,7 +170,8 @@ export default async function EventSharePage({ params }: PageProps) {
             Go to ReSell Marketplace
           </Link>
         </section>
-      </main>
+        <SiteFooter />
+    </main>
     );
   }
 
@@ -177,8 +179,9 @@ export default async function EventSharePage({ params }: PageProps) {
   const dateText = formatDate(event.startAt);
 
   return (
-    <main className="min-h-screen bg-[#0f1420] px-5 py-10 text-white">
-      <section className="mx-auto max-w-2xl overflow-hidden rounded-[34px] border border-white/10 bg-[#1C2230] shadow-2xl">
+    <main className="site-shell resell-interior">
+      <SiteHeader />
+      <section className="mx-auto my-12 max-w-2xl overflow-hidden rounded-[28px]">
         <div className="relative h-72 bg-[#1C2230]">
           {event.coverImageUrl ? (
             // eslint-disable-next-line @next/next/no-img-element
@@ -191,7 +194,7 @@ export default async function EventSharePage({ params }: PageProps) {
           <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#0f1420]/25 to-[#1C2230]" />
         </div>
 
-        <div className="p-7">
+        <div className="px-2 pb-10 pt-8 sm:px-6">
           <div className="flex items-center gap-3">
             <Image src="/resell-logo.png" alt="ReSell Marketplace" width={48} height={48} priority className="rounded-xl" />
             <div>
@@ -201,10 +204,10 @@ export default async function EventSharePage({ params }: PageProps) {
           </div>
 
           <p className="mt-6 text-sm font-bold text-[#D19759]">{dateText}</p>
-          <h1 className="mt-2 text-4xl font-black leading-tight tracking-tight">{event.title}</h1>
+          <h1 className="mt-2 break-words text-3xl font-bold leading-tight tracking-tight sm:text-4xl">{event.title}</h1>
 
           {event.isPast ? (
-            <div className="mt-5 flex gap-3 rounded-2xl border border-[#D19759]/35 bg-[#D19759]/15 px-4 py-3">
+            <div className="mt-5 flex items-center gap-3 border-l-2 border-[#D19759] py-3 pl-4">
               <InfoIcon type="date" />
               <p className="text-sm font-semibold leading-6 text-[#F2D6AE]">
                 This event has ended. You can still view the details in ReSell.
@@ -214,7 +217,7 @@ export default async function EventSharePage({ params }: PageProps) {
 
           <div className="mt-6 grid gap-3">
             {dateText ? (
-              <div className="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/[0.04] p-4">
+              <div className="flex items-center gap-3 border-b border-white/10 py-4">
                 <InfoIcon type="date" />
                 <div>
                   <p className="text-xs font-bold uppercase tracking-[0.16em] text-white/40">Date and time</p>
@@ -224,7 +227,7 @@ export default async function EventSharePage({ params }: PageProps) {
             ) : null}
 
             {locationText ? (
-              <div className="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/[0.04] p-4">
+              <div className="flex items-center gap-3 border-b border-white/10 py-4">
                 <InfoIcon type="location" />
                 <div>
                   <p className="text-xs font-bold uppercase tracking-[0.16em] text-white/40">Location</p>
@@ -234,7 +237,7 @@ export default async function EventSharePage({ params }: PageProps) {
             ) : null}
 
             {event.priceText ? (
-              <div className="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/[0.04] p-4">
+              <div className="flex items-center gap-3 border-b border-white/10 py-4">
                 <InfoIcon type="price" />
                 <div>
                   <p className="text-xs font-bold uppercase tracking-[0.16em] text-white/40">Price</p>
@@ -246,18 +249,14 @@ export default async function EventSharePage({ params }: PageProps) {
 
           {event.description ? <p className="mt-6 text-base leading-7 text-white/72">{event.description}</p> : null}
 
-          <OpenInReSellButton
-            routePath={`events/${slug}`}
-            className="mt-8 block w-full rounded-2xl bg-[#78A3D7] px-6 py-4 text-center text-base font-black text-white transition hover:opacity-90"
-          >
-            Open in ReSell
-          </OpenInReSellButton>
+          <OpenInReSellButton routePath={`events/${slug}`} className="mt-8 block w-full rounded-full bg-[#78A3D7] px-6 py-4 text-center text-sm font-bold text-white transition hover:opacity-90" />
 
           <p className="mt-5 text-center text-xs leading-5 text-white/45">
             If the app is installed, this link opens the event in ReSell. If not, install ReSell Marketplace and sign in to respond.
           </p>
         </div>
       </section>
+      <SiteFooter />
     </main>
   );
 }

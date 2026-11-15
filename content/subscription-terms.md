@@ -4,8 +4,8 @@ title: Subscription Terms
 
 # Subscription Terms
 
-**Effective date:** July 28, 2026
-**Policy version:** 2026-07-28-v3
+**Effective date:** November 15, 2026
+**Policy version:** 2026-11-15-v1
 
 These Subscription Terms apply when ReSell enables an auto-renewing ReSell Pro subscription or a separate auto-renewing profile-badge subscription. They supplement the Terms of Service.
 
@@ -17,6 +17,8 @@ ReSell does not receive your full payment-card number.
 
 ## 2. ReSell Pro
 
+**Daily listing allowance:** Free ReSell accounts may publish up to three new listings per UTC calendar day. An eligible active ReSell Pro entitlement removes this daily numerical limit, allowing unlimited new listings subject to marketplace, safety, anti-spam, and technical rules. Cancellation does not necessarily end an already paid entitlement before its verified expiration. Access depends on the entitlement status confirmed by ReSell.
+
 ReSell Pro may include benefits displayed in the app, such as seller analytics, story tools, listing-priority benefits, advertisement tools, or other premium features.
 
 Benefits do not guarantee listing placement, impressions, clicks, messages, sales, revenue, or uninterrupted availability.
@@ -26,6 +28,8 @@ Benefits do not guarantee listing placement, impressions, clicks, messages, sale
 A separate profile-badge subscription may display a badge next to a user’s name or profile.
 
 The badge is not identity verification, background verification, item authentication, endorsement, or a safety guarantee. It may be purchased separately from ReSell Pro and may not include ranking benefits.
+
+A Pro Badge subscription does not include unlimited daily listings, ReSell Pro seller tools, or other ReSell Pro benefits unless expressly stated in a separate offer.
 
 ## 4. Automatic renewal
 
