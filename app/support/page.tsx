@@ -1,3 +1,4 @@
+import { MailIcon } from "../components/WebsiteIcons";
 import Link from "next/link";
 import { SiteHeader, SiteFooter } from "../components/SiteChrome";
 
@@ -30,7 +31,7 @@ export default function SupportPage() {
         </p>
         <Link className="rs-text-link" href="/delete-account">
           View account deletion information
-          <span aria-hidden="true">↗</span>
+          <MailIcon />
         </Link>
       </section>
       <SiteFooter />

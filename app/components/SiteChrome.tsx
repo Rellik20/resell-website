@@ -55,7 +55,7 @@ export function SiteHeader() {
         </div>
 
         <Link className="rs-header-cta" href="/#download">
-          Get ReSell <span aria-hidden="true">↗</span>
+          Get ReSell
         </Link>
 
         <details className="rs-mobile-nav">

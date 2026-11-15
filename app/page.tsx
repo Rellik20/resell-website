@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { ExternalLinkIcon } from "./components/WebsiteIcons";
 import {
   SiteHeader,
   SiteFooter,
@@ -45,6 +46,7 @@ export default function Home() {
             >
               <span className="rs-store-overline">Download on the</span>
               <strong>App Store</strong>
+              <ExternalLinkIcon />
             </a>
             <a
               className="rs-store-link"
@@ -55,6 +57,7 @@ export default function Home() {
             >
               <span className="rs-store-overline">Get it on</span>
               <strong>Google Play</strong>
+              <ExternalLinkIcon />
             </a>
           </div>
           <p className="rs-hero-description">
@@ -101,7 +104,7 @@ export default function Home() {
             unlimited daily listings while their subscription is active.
           </p>
           <Link className="rs-text-link" href="/paid-features">
-            Explore paid features <span aria-hidden="true">↗</span>
+            Explore paid features
           </Link>
         </div>
       </section>
@@ -147,13 +150,13 @@ export default function Home() {
              href={STORE_LINKS.ios}
              target="_blank"
              rel="noopener noreferrer">
-            App Store <span aria-hidden="true">↗</span>
+            App Store <ExternalLinkIcon />
           </a>
           <a className="rs-button rs-button-outline"
              href={STORE_LINKS.android}
              target="_blank"
              rel="noopener noreferrer">
-            Google Play <span aria-hidden="true">↗</span>
+            Google Play <ExternalLinkIcon />
           </a>
         </div>
         <Link className="rs-small-link" href="/support">
