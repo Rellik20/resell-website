@@ -7,7 +7,8 @@
         "paths": [
           "/u/*",
           "/events/*",
-          "/listings/*"
+          "/listings/*",
+          "/social/posts/*"
         ],
         "components": [
           {
@@ -20,6 +21,10 @@
           {
             "/": "/listings/*",
             "comment": "Open ReSell listing links in the app"
+          },
+          {
+            "/": "/social/posts/*",
+            "comment": "Open ReSell Social posts in the app"
           }
         ]
       }
