@@ -259,42 +259,24 @@ export default async function SocialPostSharePage({
       <main className="site-shell resell-interior min-h-screen">
         <SiteHeader />
 
-        <section className="rs-rise mx-auto flex w-full max-w-[680px] flex-col items-center px-4 pb-24 pt-14 text-center sm:pt-20">
-          <div className="w-full rounded-[28px] border border-white/10 bg-[#121720] px-6 py-12 shadow-[0_24px_70px_rgba(0,0,0,0.35)] sm:px-12 sm:py-16">
-            <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-[22px] border border-white/10 bg-[#1B2330]">
-              <Image
-                src="/resell-logo.png"
-                width={62}
-                height={62}
-                alt="ReSell Marketplace"
-                className="rounded-2xl"
-                priority
-              />
-            </div>
+        <section className="rs-rise mx-auto my-16 flex max-w-xl flex-col items-center px-4 py-12 text-center">
+          <Image
+            src="/resell-logo.png"
+            alt="ReSell Marketplace"
+            width={64}
+            height={64}
+            priority
+            className="rounded-2xl"
+          />
 
-            <div className="mt-8 inline-flex items-center gap-2 rounded-full border border-[#3869A8]/45 bg-[#17263A] px-4 py-2">
-              <span className="h-1.5 w-1.5 rounded-full bg-[#65A5FF]" />
-              <span className="text-[11px] font-bold uppercase tracking-[0.16em] text-[#B9D6FF]">
-                ReSell Social
-              </span>
-            </div>
+          <h1 className="mt-6 text-3xl font-semibold text-white">
+            Post unavailable
+          </h1>
 
-            <h1 className="mt-6 text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
-              Post unavailable
-            </h1>
-
-            <p className="mx-auto mt-4 max-w-md text-[15px] leading-7 text-[#BBC5D5]">
-              This post may have been deleted, removed, hidden,
-              or is no longer available.
-            </p>
-
-            <Link
-              href="/"
-              className="mt-9 inline-flex min-h-12 items-center justify-center rounded-2xl bg-[#3478EB] px-7 py-3 text-sm font-bold text-white shadow-[0_12px_28px_rgba(35,102,218,0.25)] transition-colors hover:bg-[#4C91FF] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#8BBAFF]"
-            >
-              Explore ReSell Marketplace
-            </Link>
-          </div>
+          <p className="mt-3 max-w-md text-sm leading-6 text-[#A9AFBC]">
+            This post may have been deleted, removed, hidden,
+            or is no longer available.
+          </p>
         </section>
 
         <SiteFooter />
@@ -318,155 +300,74 @@ export default async function SocialPostSharePage({
     <main className="site-shell resell-interior min-h-screen">
       <SiteHeader />
 
-      <section className="rs-rise relative mx-auto w-full max-w-[790px] px-1 pb-20 pt-8 sm:px-4 sm:pt-14">
-        <div className="mb-7 flex flex-col justify-between gap-5 sm:mb-9 sm:flex-row sm:items-end">
-          <div>
-            <div className="inline-flex items-center gap-2 rounded-full border border-[#3869A8]/45 bg-[#142337] px-3.5 py-2">
-              <span className="h-1.5 w-1.5 rounded-full bg-[#60A5FA]" />
-              <span className="text-[11px] font-bold uppercase tracking-[0.16em] text-[#BFDBFE]">
-                ReSell Social
-              </span>
-            </div>
+      <section className="rs-rise mx-auto my-12 w-full max-w-xl px-4 pb-14 sm:px-8">
+        <header className="flex items-center gap-3 border-b border-white/10 pb-6">
+          <div className="relative flex h-14 w-14 shrink-0 items-center justify-center overflow-hidden rounded-full bg-[#3A4149] text-base font-semibold text-white">
+            {avatarUrl ? (
+              <Image
+                src={avatarUrl}
+                alt={`${name} profile picture`}
+                fill
+                sizes="56px"
+                unoptimized
+                className="object-cover"
+              />
+            ) : (
+              <span>{initials}</span>
+            )}
+          </div>
 
-            <h1 className="mt-4 text-[29px] font-extrabold tracking-[-0.04em] text-white sm:text-[39px]">
-              A conversation worth sharing.
-            </h1>
+          <div className="min-w-0 flex-1">
+            <p className="truncate text-base font-semibold text-white">
+              {name}
+            </p>
 
-            <p className="mt-2 text-sm leading-6 text-[#B7C2D3] sm:text-[15px]">
-              Discover what the ReSell community is talking about.
+            {username ? (
+              <Link
+                href={`/u/${encodeURIComponent(username)}`}
+                className="mt-0.5 inline-block text-sm text-[#A9AFBC] transition-colors hover:text-white"
+              >
+                @{username}
+              </Link>
+            ) : null}
+
+            <p className="mt-1 text-xs text-[#A9AFBC]">
+              {formattedDate(post.createdAt)}
             </p>
           </div>
+        </header>
 
-          <Link
-            href="/"
-            className="inline-flex shrink-0 items-center gap-2 self-start rounded-full border border-white/15 bg-[#171C26] px-4 py-2.5 text-xs font-semibold text-[#E6EBF4] transition-colors hover:border-white/30 hover:bg-[#222B39]"
-          >
-            <svg
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="1.8"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              className="h-4 w-4"
-              aria-hidden="true"
-            >
-              <path d="m15 18-6-6 6-6" />
-            </svg>
-            Marketplace
-          </Link>
-        </div>
-
-        <article className="overflow-hidden rounded-[28px] border border-white/[0.12] bg-[#141922] shadow-[0_28px_80px_rgba(0,0,0,0.38)]">
-          <div className="h-[3px] bg-[#3B82F6]" />
-
-          <div className="flex items-center gap-3.5 border-b border-white/[0.08] px-5 py-5 sm:px-7 sm:py-6">
-            <div className="relative flex h-[54px] w-[54px] shrink-0 items-center justify-center overflow-hidden rounded-full border border-[#638CC7]/45 bg-[#253955] text-[16px] font-extrabold tracking-[0.02em] text-white shadow-[0_0_0_4px_rgba(59,130,246,0.08)]">
-              {avatarUrl ? (
-                  <Image
-                    src={avatarUrl}
-                    alt={`${name} profile picture`}
-                    fill
-                    sizes="54px"
-                    unoptimized
-                    className="object-cover"
-                  />
-                ) : (
-                  <span>{initials}</span>
-                )}
-            </div>
-
-            <div className="min-w-0 flex-1">
-              <p className="truncate text-[16px] font-bold tracking-tight text-white sm:text-[17px]">
-                {name}
-              </p>
-
-              <div className="mt-1 flex flex-wrap items-center gap-x-2 gap-y-1 text-[12px] text-[#AAB8CA]">
-                {username ? (
-                  <Link
-                    href={`/u/${encodeURIComponent(username)}`}
-                    className="font-semibold text-[#A6CCFF] transition-colors hover:text-white"
-                  >
-                    @{username}
-                  </Link>
-                ) : null}
-
-                {username ? (
-                  <span className="text-white/25">/</span>
-                ) : null}
-
-                <span>{formattedDate(post.createdAt)}</span>
-              </div>
-            </div>
-
-            <span className="hidden shrink-0 rounded-full border border-white/10 bg-[#1D2634] px-3 py-1.5 text-[11px] font-semibold text-[#C2D2E8] sm:inline-flex">
-              Community post
-            </span>
-          </div>
-
-          <div className="px-5 py-7 sm:px-8 sm:py-9">
-            <p className="whitespace-pre-wrap break-words text-[17px] font-medium leading-[1.9] tracking-[-0.01em] text-[#F5F7FB] sm:text-[19px]">
-              {renderPostText(post.text)}
-            </p>
-          </div>
+        <article className="pt-7">
+          <p className="whitespace-pre-wrap break-words text-base leading-7 text-white">
+            {renderPostText(post.text)}
+          </p>
 
           {imageUrl ? (
-            <div className="border-y border-white/[0.08] bg-[#0D121A] p-3 sm:p-5">
-              <div className="overflow-hidden rounded-2xl bg-[#080B11]">
-                <Image
-                  src={imageUrl}
-                  alt={`Photo shared by ${name}`}
-                  width={1200}
-                  height={900}
-                  unoptimized
-                  className="mx-auto h-auto max-h-[720px] w-full object-contain"
-                />
-              </div>
+            <div className="mt-6 overflow-hidden rounded-xl">
+              <Image
+                src={imageUrl}
+                alt={`Photo shared by ${name}`}
+                width={1200}
+                height={900}
+                unoptimized
+                className="h-auto max-h-[680px] w-full object-contain"
+              />
             </div>
           ) : null}
-
-          <div className="border-t border-white/[0.09] bg-[#101722] px-5 py-6 sm:px-8 sm:py-8">
-            <div className="flex items-start gap-3">
-              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-[#4474B8]/35 bg-[#1C3050] text-[#9EC7FF]">
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="1.8"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  className="h-5 w-5"
-                  aria-hidden="true"
-                >
-                  <path d="M8 10h8M8 14h5" />
-                  <path d="M5 4h14a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H9l-5 3v-3a2 2 0 0 1-2-2V7a3 3 0 0 1 3-3Z" />
-                </svg>
-              </div>
-
-              <div className="min-w-0 flex-1">
-                <h2 className="text-[15px] font-bold tracking-tight text-white sm:text-[16px]">
-                  Join the conversation
-                </h2>
-                <p className="mt-1 text-[13px] leading-6 text-[#B1BED0]">
-                  Open ReSell to read the discussion and connect
-                  with the community.
-                </p>
-              </div>
-            </div>
-
-            <OpenInReSellButton
-              routePath={`social/posts/${post.id}`}
-              className="mt-6 flex min-h-[52px] w-full items-center justify-center rounded-2xl bg-[#3478EB] px-6 py-3.5 text-[14px] font-bold tracking-[0.01em] text-white shadow-[0_12px_28px_rgba(35,102,218,0.27)] transition-colors hover:bg-[#4C91FF] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#8BBAFF]"
-            >
-              Open in ReSell
-            </OpenInReSellButton>
-          </div>
         </article>
 
-        <p className="mx-auto mt-7 max-w-lg text-center text-[12px] leading-6 text-[#A8B3C4]">
-          Shared from ReSell Marketplace. Unavailable or removed
-          content cannot be viewed here.
-        </p>
+        <div className="mt-10 border-t border-white/10 pt-7 text-center">
+          <p className="text-sm leading-6 text-[#A9AFBC]">
+            View this post and its replies in the ReSell app.
+          </p>
+
+          <OpenInReSellButton
+            routePath={`social/posts/${post.id}`}
+            className="mt-6 inline-flex w-full max-w-[260px] items-center justify-center rounded-full border border-white/20 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
+          >
+            Open in ReSell
+          </OpenInReSellButton>
+        </div>
       </section>
 
       <SiteFooter />
